@@ -1,0 +1,66 @@
+export CLICOLOR=1
+
+# fix locale warnnings,
+# use `sudo locale-gen "en_US.UTF-8"` to generate if needed
+# can put these two lines to /etc/default/locale (without "export")
+# http://askubuntu.com/a/229512
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
+# to make tools like `git diff` to show unicode chars properly
+export LESSCHARSET=UTF-8
+
+# This will prevent `tar cf` from backing up files to `._foo...` in the tar file (Mac OS only)
+export COPYFILE_DISABLE=1
+export LESS="--no-init --quit-if-one-screen --RAW-CONTROL-CHARS"
+
+export ETCDCTL_API=3
+
+
+export RUST_BACKTRACE='full'
+export GOROOT="/usr/local/go"
+export GOPATH="$HOME/go"
+
+export PATH="$PATH:$HOME/.cargo/bin:/usr/local/sbin"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin"
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.6/bin"
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
+export PATH="$PATH:/Library/PostgreSQL/9.6/bin"
+export PATH="$PATH:/Library/PostgreSQL/10/bin"
+
+
+export XDATA_DIR="$HOME/.local/share"
+export VIRTUALENV_HOME="${XDATA_DIR}/venvs"
+
+export CICADA_LOG_FILE="/tmp/cicada-debug.log"
+export HISTORY_SIZE=9999
+export HISTORY_DELETE_DUPS=1
+export NO_EXIT_ON_CTRL_D=1
+
+alias bash='bash --rcfile ~/.bash_profile'
+alias bat='bat --theme=OneHalfDark'
+alias fd='fd -HI'
+alias grep="grep -I --color=auto --exclude-dir=.git --exclude-dir=build"
+alias greppy="grep -I --color=auto --exclude-dir=.git --exclude-dir=build --include=*.py"
+alias gti=git
+alias ll='exa -lh --time-style=long-iso'
+alias llt='exa -rlh -s time --time-style=long-iso'
+alias ls='exa'
+alias lst='exa -rlh -s time --time-style=long-iso'
+alias mmg='mmgo get -id'
+alias mr='mvim --remote'
+alias mtr='mtr -w'
+alias netio="bwm-ng"
+alias tree="exa --tree"
+# not work now
+alias 鴀=git
+
+export CICADA_GITBR_PREFIX='['
+export CICADA_GITBR_SUFFIX=']'
+export PROMPT="${COLOR_STATUS}$USER${RESET}@${COLOR_STATUS}$HOSTNAME${RESET}: ${GITBR}${COLOR_STATUS}$CWD${RESET}$ "
+# export PROMPT="${COLOR_STATUS}$${RESET} "
+
+source ~/.cicadarc_local

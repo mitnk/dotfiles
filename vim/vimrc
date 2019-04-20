@@ -1,0 +1,199 @@
+" =========================================================
+" =================== Basic Options =======================
+
+syntax on
+filetype indent plugin on
+
+set number
+set showcmd
+set autochdir
+set expandtab
+set hlsearch
+set wrap
+colo delek
+"colo evening
+set incsearch
+set cursorline
+set scrolloff=3
+set complete-=i
+
+" nubmer of spaces for each <tab>
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set smartindent
+
+" encodings
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,gb18030,big5
+
+set backspace=indent,eol,start
+
+" $ brew install ctags gotags
+" $ cd <to-your-project-dir>
+" $ ctags -R .
+" for go code:
+" $ gotags -R . > tags
+" Then you are good to use <C-]> to jump through definitions,
+" use <C-t> to go back.
+set tags=tags;/
+
+
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" =========================================================
+" ================== Back Up and Undo =====================
+set noswapfile
+set backup
+set directory=~/.vim/tmp
+set backupdir=~/.vim/tmp
+
+" Persistent Undo from Vim 7.3
+if v:version >= 703
+    set undodir=~/.vim/undo
+    set undofile
+endif
+
+
+" =========================================================
+" ================== GUI Alike ============================
+
+if has("gui_running")
+    set go=
+    " For Macvim in Mac
+    set guifont=Monaco:h17
+    " For GVim in Ubuntu
+    " set guifont=Bitstream\ Vera\ Sans\ Mono\ 14
+endif
+
+
+" Display tabs and trailing spaces visually  
+set list listchars=tab:>-,trail:■
+
+" Highlight column 80
+if exists('+colorcolumn')
+  set colorcolumn=80
+  highlight ColorColumn ctermbg=darkgrey
+else
+  highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+  match OverLength /\%>79v.\+/
+endif
+
+" Remember cursor position after reload
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" For the crontab and the like
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif
+
+" =========================================================
+" ============ Key Mappings & Plugins =====================
+
+let mapleader = "z"
+
+nmap <silent> <Leader>e <C-^>
+nmap <Leader>l :buffers<CR>:edit<Space>#
+nmap <silent> <Leader>k :bd<CR>
+nmap <Leader>bb :ls<CR>:buffer<Space>
+
+" copy and paste with the outside of Vim
+map <silent> <Leader>p "+gP
+map <silent> <Leader>y "+y
+" set clipboard=unnamed
+
+" Run Python and C/C++ in Vim
+nmap <silent> <Leader>P :w<CR>:!py % > vim-py3.out && echo === PY3 OUTPUT === && cat vim-py3.out && rm -f vim-py3.out<CR>
+nmap <silent> <Leader>G :w<CR>:!gcc -o vim-gcc.out %<CR>:!echo === GCC OUTPUT === && ./vim-gcc.out && rm vim-gcc.out<CR>
+nmap <silent> <Leader>GG :w<CR>:!g++ -o vim-gcc.out %<CR>:!echo === GCC OUTPUT === && ./vim-gcc.out && rm vim-gcc.out<CR>
+
+nmap <silent> <SPACE> <C-F>
+nmap <silent> <S-SPACE> <C-B>
+
+" for NERDTree
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.o$', '\~$', '^__pycache__$']
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
+nmap <silent> <Leader>N :NERDTree<CR>
+
+nmap <silent> <Leader>s :%s/[ \t][ \t]*$//<CR>
+
+set laststatus=2
+" set statusline=%r%m[%F]%=\ line:%l/%L\ col:%c\ buffers:[%n]
+
+" thwins.vim
+if (&columns > 120)
+  let g:thwins_master_pane_width=85
+else
+  let g:thwins_master_pane_width=&columns * 3 / 5
+endif
+
+function! HighlightStatusLine()
+    " Set statusline
+    set statusline=
+    " File path
+    if has("gui_running")
+        set statusline+=%5*
+    endif
+    set statusline+=\ %m%r%w%F%=
+
+    " Row / Column
+    if has("gui_running")
+        set statusline+=%5*
+    endif
+    set statusline+=\ [%l:%c]\ [%P]
+
+    " FileType
+    if has("gui_running")
+        set statusline+=\ %3*
+    endif
+    set statusline+=\ %Y/
+
+    " Encoding
+    if has("gui_running")
+        set statusline+=%3*
+    endif
+    set statusline+=%{''.(&fenc!=''?&fenc:&enc).''}/
+
+    " Encoding2
+    if has("gui_running")
+        set statusline+=%3*
+    endif
+    set statusline+=%{(&bomb?\",BOM\":\"\")}           "Encoding2
+
+    " FileFormat (unix / dos ..)
+    if has("gui_running")
+        set statusline+=%3*
+    endif
+    set statusline+=%{&ff}\ 
+
+    if has("gui_running")
+        hi User1 guifg=#ffdad8  guibg=#000000
+        hi User2 guifg=#000000  guibg=#F4905C
+        hi User3 guifg=#999999  guibg=#aefe7B
+        hi User4 guifg=#112605  guibg=#aefe7B
+        hi User5 guifg=#051d00  guibg=#7dcc7d
+        hi User7 guifg=#ffffff  guibg=#880c0e gui=bold
+        hi User8 guifg=#ffffff  guibg=#5b7fbb
+        hi User9 guifg=#ffffff  guibg=#810085
+        hi User0 guifg=#ffffff  guibg=#094afe
+    endif
+endfunction
+
+function! UnHighlightStatusLine()
+    setlocal statusline=%1*%F
+    if has("gui_running")
+        hi User1 guifg=#333333 guibg=#222222
+    endif
+endfunction
+
+autocmd! BufEnter * call HighlightStatusLine()
+autocmd! BufLeave * call UnHighlightStatusLine()
+
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+" http://stackoverflow.com/a/7078429/665869
+cmap w!! w !sudo tee > /dev/null %

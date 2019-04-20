@@ -1,0 +1,5 @@
+#! /bin/bash
+echo 'proxy checking socks5 ...' \
+    && curl -x socks5://127.0.0.1:1080 https://hugo.wang/http/ip/ \
+    && echo 'checking http ...' \
+    && curl -x http://127.0.0.1:1080 https://hugo.wang/http/ip/

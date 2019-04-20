@@ -1,0 +1,9 @@
+# make screen to run .bash_profile
+shell -$SHELL
+
+defutf8 on
+vbell on
+screen -t tom 1
+screen -t cat 2
+screen -t bash 3
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %c"  

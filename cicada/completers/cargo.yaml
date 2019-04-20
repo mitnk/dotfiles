@@ -1,0 +1,17 @@
+- build:
+   - --release
+   - --verbose
+   - --quiet
+- check
+- clean
+- doc
+- fmt
+- new
+- init
+- run
+- test
+- bench
+- update
+- search
+- publish
+- install

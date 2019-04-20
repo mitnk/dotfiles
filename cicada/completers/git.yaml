@@ -1,0 +1,74 @@
+- ci:
+    - --amend
+    - --add
+    - --reset-author
+    - --date=
+    - --short
+    - --dry-run
+    - --squash=
+    - --author=
+    - --fixup=
+    - --status
+    - --branch
+    - --long
+    - --porcelain
+- commit:
+    - --amend
+    - --add
+    - --reset-author
+    - --date=
+    - --short
+    - --dry-run
+    - --squash=
+    - --author=
+    - --fixup=
+    - --status
+    - --branch
+    - --long
+    - --porcelain
+- remote:
+    - add
+    - origin
+    - upstream
+    - rm
+    - -v
+
+- push:
+  - origin
+  - upstream
+- pull:
+  - origin
+  - upstream
+- pub
+- merge:
+    - "`git branch -a | tr -d '* ' | grep -v HEAD | sed 's_^.*/__' | sort | uniq`"
+- sync
+- st
+- status
+- diff:
+  - --cached
+- clone
+- stash:
+  - pop
+- fetch:
+  - origin
+  - upstream
+  - "`git branch -a | tr -d '* ' | grep -v HEAD | sed 's_^.*/__' | sort | uniq`"
+- fetch-tags
+- checkout:
+    - "`git branch -a | tr -d '* ' | grep -v HEAD | sed 's_^.*/__' | sort | uniq`"
+- co:
+    - "`git branch -a | tr -d '* ' | grep -v HEAD | sed 's_^.*/__' | sort | uniq`"
+- reset:
+    - HEAD
+- log:
+    - --oneline
+    - --format=oneline
+    - --format=short
+- br:
+    - -d
+    - -D
+    - "`git branch | tr -d '* '`"
+- coall
+- diffwithmaster
+- getpr

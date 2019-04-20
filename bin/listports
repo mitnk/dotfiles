@@ -1,0 +1,2 @@
+#! /bin/bash
+sudo lsof -nPi | grep -i listen | awk '{print substr($1, 1, 7), substr($3, 1, 7), $5, $8, $9}' | sort | uniq | tr ' ' '\t'

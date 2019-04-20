@@ -1,0 +1,17 @@
+#! /usr/local/bin/py
+import sys
+import re
+import subprocess
+
+cmd = ['ps', 'a', '-o', 'user,pid,ppid,pgid,tpgid,state,command']
+for arg in sys.argv[1:]:
+    cmd[1] += arg
+output = subprocess.check_output(cmd)
+output = output.decode()
+for line in output.split('\n'):
+    if not line.strip():
+        continue
+    line = re.sub(r'[^ ]*/', '', line)
+    if len(line) > 72:
+        line = line[:70] + '..'
+    print(line.rstrip())

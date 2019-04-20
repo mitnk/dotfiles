@@ -1,0 +1,3 @@
+#!/bin/bash
+# Usage: ./this_script 9.5
+sudo -u postgres pg_ctl reload -D/Library/PostgreSQL/$1/data

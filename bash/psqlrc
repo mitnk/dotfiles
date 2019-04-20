@@ -1,0 +1,12 @@
+-- open timing
+\timing on
+
+-- set toggle expanded output to AUTO
+\x auto
+
+-- When showing null values, displays NULL instead of blank, which is indistinguishable
+-- from an empty string in char fields
+\pset null NULL
+
+-- close paging
+\pset pager off

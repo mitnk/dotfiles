@@ -1,0 +1,146 @@
+#! /usr/bin/python
+# The above line is here only for Vim to treat this file as Python
+import random
+import re
+import sys
+import os.path
+import datetime
+
+$LANG = "en_US.UTF-8"
+$LANGUAGE = "en_US.UTF-8"
+$LC_ALL = "en_US.UTF-8"
+$LC_CTYPE = "en_US.UTF-8"
+
+xontrib load vox
+xontrib load bashisms
+
+# load local private xonshrc if exists
+xonsh_ext_dir = os.path.expanduser('~/.xonsh')
+if os.path.isdir(xonsh_ext_dir):
+    sys.path.append(xonsh_ext_dir)
+
+HOME = os.path.expanduser('~')
+GOPATH = os.path.expanduser('~/go')
+$GOPATH = GOPATH
+for p in (
+    '/Library/Frameworks/Python.framework/Versions/2.7/bin',
+    '/Library/Frameworks/Python.framework/Versions/3.6/bin',
+    os.path.join(HOME, '.cargo/bin'),
+    '/usr/local/go/bin',
+    os.path.join(GOPATH, 'bin'),
+    '/usr/local/bin',
+):
+    if not os.path.isdir(p):
+        continue
+    if p in $PATH:
+        continue
+    $PATH.insert(0, p)
+
+for p in (
+    '/Library/PostgreSQL/9.5/bin',
+    '/Library/PostgreSQL/9.6/bin',
+    '/Library/PostgreSQL/9.7/bin',
+):
+    if not os.path.isdir(p):
+        continue
+    if p in $PATH:
+        continue
+    $PATH.append(p)
+
+
+def render_prompt():
+    if __xonsh_history__.rtns and __xonsh_history__.rtns[-1] != 0:
+        return '{env_name}{user}{BOLD_RED}@{NO_COLOR}{hostname}: ' \
+                '{cwd_base}{BOLD_RED}{prompt_end}{NO_COLOR} '
+    else:
+        return '{env_name}{user}{BOLD_BLUE}@{NO_COLOR}{hostname}: ' \
+               '{cwd_base}{BOLD_BLUE}{prompt_end}{NO_COLOR} '
+$PROMPT = render_prompt
+
+def render_right_prompt():
+    try:
+        pid = os.getpid()
+    except OSError:
+        pid = None
+    return '[{}]'.format(pid)
+# $RIGHT_PROMPT = render_right_prompt
+
+XDATA_DIR = os.path.expanduser('~/.local/share')
+$VIRTUALENV_HOME = XDATA_DIR
+
+
+# set to non-zero to bypass amalgamated before xonsh start
+# means sessions started in xonsh session will be amalgamate free
+$XONSH_DEBUG = 1
+
+# do NOT save output in history
+$XONSH_STORE_STDOUT = False
+# PTK - do NOT suggest when input commands
+$AUTO_SUGGEST = False
+
+# history backend: 'json', 'sqlite', 'dummy', <class>
+from dotxonsh.history import HybriDBHistory
+$XONSH_HISTORY_BACKEND = HybriDBHistory
+
+# bigger history
+$XONSH_HISTORY_SIZE = (0xFFFFFF, 'commands')
+
+$XONSH_SHOW_TRACEBACK = True
+$XONSH_TRACEBACK_LOGFILE = '/tmp/xonsh-errors.log'
+
+# file completions
+$SUBSEQUENCE_PATH_COMPLETION = False
+$CASE_SENSITIVE_COMPLETIONS = True
+$FUZZY_PATH_COMPLETION = False
+
+# history - ignore duplicated cmds
+$HISTCONTROL = 'ignoredups'
+
+# Let's not use bash completions
+$BASH_COMPLETIONS = []
+
+# readline shell is faster, PTK is more powerful.
+$SHELL_TYPE = 'readline'
+$SHELL_TYPE = 'best'
+$VI_MODE = True  # only work for PTK
+
+# This will prevent `tar cf` from backing up files to `._foo...`
+# in the tar file (Mac OS only)
+$COPYFILE_DISABLE = 1
+
+
+aliases['grep'] = [
+    'grep',
+    '-I',
+    '--color=auto',
+    '--exclude-dir=.git',
+    '--exclude-dir=./build',
+]
+aliases['greppy'] = [
+    'grep',
+    '-I',
+    '--color=auto',
+    '--exclude-dir=.git',
+    '--exclude-dir=./build',
+    '--include=*.py',
+]
+
+completers_keep = ['base', 'skip', 'cd', 'import', 'python', 'bash', 'path']
+completers_to_rm = ['python_mode']
+for k in __xonsh_completers__:
+    if k not in completers_keep:
+        completers_to_rm.append(k)
+for k in completers_to_rm:
+    try:
+        __xonsh_completers__.pop(k)
+    except:
+        pass
+from dotxonsh.completers.origins.python import complete_python
+__xonsh_completers__['python'] = complete_python
+from dotxonsh.xonsh_completer import complete_xonsh
+__xonsh_completers__['xonsh'] = complete_xonsh
+__xonsh_completers__.move_to_end('xonsh', last=False)
+
+xonshrc_local = os.path.expanduser('~/.xonshrc_local')
+if os.path.isfile(xonshrc_local):
+    source @(xonshrc_local)

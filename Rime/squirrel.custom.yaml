@@ -1,0 +1,9 @@
+# squirrel.custom.yaml
+# See also: default.custom.yaml
+# save it to:
+#   ~/.config/ibus/rime  (linux)
+#   ~/Library/Rime       (macos)
+#   %APPDATA%\Rime       (windows)
+
+patch:
+  app_options: {}

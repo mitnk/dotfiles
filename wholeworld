@@ -1,0 +1,8 @@
+#!/bin/sh
+count=`ps ax | grep "autossh" | wc -l`
+if [ $count -gt 1 ]; then
+    killall ssh
+    echo "killed old ssh service"
+fi
+autossh -f -M 7071 -CfN -D 0.0.0.0:17777 mitnk@mitnk.com
+echo "new ssh service started"

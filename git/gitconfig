@@ -1,0 +1,53 @@
+[user]
+    name = Hugo Wang
+    email = w@mitnk.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    log = auto
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+[alias]
+    # Basic
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    last = log -1 -p HEAD
+    lastfiles = "!git log -1 --stat | cat"
+    diffwithmaster = diff --stat master...
+
+    # Drop all changes
+    coall = "!git st | awk '/modified/ {print $NF}' | xargs -I{} git co '{}'"
+    # Working with branches
+    brname = "!git rev-parse --abbrev-ref HEAD"
+    # sync current branch with the remote
+    sync = "!git pull origin $(git brname)"
+    # sync current branch with the remote
+    syncremote = "!git pull origin master"
+    # Push the current branch to the remote
+    pub = "!git push origin $(git brname)"
+
+    # update submodules
+    su = submodule update --init
+
+    # fetch all tags from remote
+    fetch-tags = fetch --tags
+
+    # fetch PR to a new branch, e.g.:
+    # git fetch upstream 17
+    getpr = "!f() { git fetch "$1" "refs/pull/$2/head" && git checkout -b "pr-$1-$2" FETCH_HEAD ; }; f"
+
+    # Checkout our version of a file and add it
+    ours = "!f() { git checkout --ours $@ && git add $@; }; f"
+    # Checkout their version of a file and add it
+    theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+
+[fetch]
+    prune = true
+[pager]
+    branch = false
+[http]
+    # proxy = http://127.0.0.1:1080

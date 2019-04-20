@@ -1,0 +1,115 @@
+export CLICOLOR=1
+
+# fix locale warnnings,
+# use `sudo locale-gen "en_US.UTF-8"` to generate if needed
+# can put these two lines to /etc/default/locale (without "export")
+# http://askubuntu.com/a/229512
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
+# to make tools like `git diff` to show unicode chars properly
+export LESSCHARSET=UTF-8
+
+# Colors
+light_green="\[\e[1;32m\]"
+light_red="\[\e[1;31m\]"
+red="\[\e[0;31m\]"
+green="\[\e[0;32m\]"
+blue="\[\e[0;34m\]"
+purple="\[\e[0;35m\]"
+yellow="\[\e[0;33m\]"
+gray="\[\e[0;37m\]"
+reset="\[\e[m\]"
+
+PS1_H='unk'
+if [ -f "/etc/hostname" ] ; then
+    PS1_H=`cat /etc/hostname`
+else
+    unamestr=`uname`
+    if [[ "$unamestr" == 'Linux' ]]; then
+        PS1_H='linux'
+    elif [[ "$unamestr" == 'Darwin' ]]; then
+        PS1_H='mbp'
+    elif [[ "$unamestr" == 'FreeBSD' ]]; then
+        PS1_H='freebsd'
+    fi
+fi
+
+PS1_U="\u"
+PS1_D="\W"
+
+function get_pyenv_name() {
+  # via http://stackoverflow.com/a/5257398/665869
+  if [ -z "$VIRTUAL_ENV" ] ; then
+    export _PYENV_NAME=""
+  else
+      local arr=(${VIRTUAL_ENV//\// })
+      local len=(${#arr[@]})
+      export _PYENV_NAME="(${arr[len - 1]})"
+  fi
+}
+
+function prompt_command() {
+  local status="$?"
+  local s_color=""
+  if [ $status != 0 ]; then
+    s_color=$red
+  else
+    s_color="${green}"
+  fi
+  get_pyenv_name
+  export PS1="${_PYENV_NAME}${PS1_U}${s_color}@${reset}${PS1_H}: ${PS1_D}${s_color}\$${reset} "
+}
+
+# never export PROMPT_COMMAND:
+# http://unix.stackexchange.com/a/106285/11409
+PROMPT_COMMAND=prompt_command
+
+if [[ `uname` == 'Darwin' ]]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
+alias ll='ls -lh'
+alias md5='md5 -r'
+
+### Preserve bash history in multiple terminal windows ###
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big history
+export HISTFILESIZE=100000               # big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+if [ -t 1 ]; then
+    # standard output is a tty
+    # do interactive initialization
+    bind '"\e[A":history-search-backward'
+    bind '"\e[B":history-search-forward'
+fi
+
+
+# This will prevent `tar cf` from backing up files to `._foo...` in the tar file (Mac OS only)
+export COPYFILE_DISABLE=1
+export LESS="-R"
+
+export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.6/bin"
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.5/bin"
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
+export GOPATH="$HOME/go"
+export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin:$HOME/.cargo/bin"
+
+# With color=auto, it displays color in the output
+# unless the output is piped to a command, or redirected to a file.
+# if -I not support, install the latest GNU grep.
+alias grep="grep -I --color=auto --exclude-dir=.git"
+alias greppy="grep -I --color=auto --exclude-dir=.git --include=*.py"
+alias netio="bwm-ng"
+alias xonsh="XONSH_DEBUG=1 xonsh"
+
+export ETCDCTL_API=3
+
+if [ -f "${HOME}/.bash_profile_local" ] ; then
+    source "${HOME}/.bash_profile_local"
+fi

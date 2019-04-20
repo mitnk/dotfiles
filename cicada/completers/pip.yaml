@@ -1,0 +1,21 @@
+- install:
+    - --force-reinstall
+    - -U
+    - --upgrade
+    - -r
+    - --requirement
+    - --user
+- download
+- uninstall
+- freeze
+- list
+- show
+- check
+- search:
+    - --no-cache-dir
+    - --timeout
+- wheel
+- hash
+- completion
+- help
+- --version

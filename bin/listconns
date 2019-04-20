@@ -1,0 +1,8 @@
+#!/bin/bash
+port=$1
+host=$(uname)
+if [ $host == "Darwin" ]; then
+    netstat -n -p tcp | grep "$port" | sort -k5
+else
+    netstat -atn | grep "$port" | sort -k5
+fi

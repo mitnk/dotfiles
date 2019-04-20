@@ -1,0 +1,22 @@
+- --version
+- build
+- exec
+- history
+- images
+- info
+- inspect
+- kill
+- logs
+- ps:
+  - -a
+- pull
+- push
+- rm
+- rmi
+- run
+- search
+- start
+- stats
+- stop
+- top
+- version
