@@ -6,15 +6,8 @@ Set up a Proxy Server?
 
 use https://github.com/inaz2/proxy2
 
-Bash
-----
-
-```bash
-cp bash_profile ~/.bash_profile
-```
-
-Vim, Git, Xonsh
----------------
+Vim, Git, Xonsh, etc.
+---------------------
 
 cd to its subdirectory and type `make`.
 
@@ -26,13 +19,6 @@ cd to its subdirectory and type `make`.
 - Python-Match [386](http://www.vim.org/scripts/script.php?script_id=386)
     - Redefines the % motion: Cycles through if/try/for/while
     - Two other motions, [% and ]%: go to the start/end of block
-
-**Font**:
-
-- OS X: Using `open vim/fonts/Monaco-Powerline.otf` to install
-- Ubuntu: `mkdir -p ~/.fonts && cp vim/fonts/Ubuntu*.otf ~/.fonts/ && fc-cache -vf`
-
-**Note**: On Ubuntu, search `Ubuntu` in ~/.vimrc to make some change.
 
 Aria2
 
@@ -50,4 +36,3 @@ Others
 ------
 
 **PostgreSQL**: `cp psqlrc ~/.psqlrc`
-
