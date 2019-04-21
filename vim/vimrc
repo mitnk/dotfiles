@@ -34,6 +34,10 @@ set backspace=indent,eol,start
 " $ brew install ctags gotags
 " $ cd <to-your-project-dir>
 " $ ctags -R .
+
+" For python projects, you may modify the file with this:
+" $ sed -i '/\<i$/d' tags
+
 " for go code:
 " $ gotags -R . > tags
 " Then you are good to use <C-]> to jump through definitions,
@@ -116,10 +120,11 @@ nmap <silent> <S-SPACE> <C-B>
 
 " for NERDTree
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.o$', '\~$', '^__pycache__$']
+
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 nmap <silent> <Leader>N :NERDTree<CR>
-
 nmap <silent> <Leader>s :%s/[ \t][ \t]*$//<CR>
+nmap <silent> <Leader>m :!open %<CR><CR>
 
 set laststatus=2
 " set statusline=%r%m[%F]%=\ line:%l/%L\ col:%c\ buffers:[%n]
@@ -192,7 +197,6 @@ endfunction
 
 autocmd! BufEnter * call HighlightStatusLine()
 autocmd! BufLeave * call UnHighlightStatusLine()
-
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 " http://stackoverflow.com/a/7078429/665869
