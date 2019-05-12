@@ -51,6 +51,7 @@ if which exa > /dev/null
     alias ls='exa'
     alias ll='exa -lh --time-style=long-iso'
     alias llt='exa -lh -s time --time-style=long-iso'
+    alias tree="exa --tree"
 else
     if uname -s | grep -iq 'darwin'
         alias ls='ls -G'
@@ -65,7 +66,6 @@ alias mmg='mmgo get -id'
 alias mr='mvim --remote'
 alias mtr='mtr -w'
 alias netio="bwm-ng"
-alias tree="exa --tree"
 # not work now
 alias 鴀=git
 
