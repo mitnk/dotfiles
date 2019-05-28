@@ -48,9 +48,9 @@ alias greppy="grep -I --color=auto --exclude-dir=.git --exclude-dir=build --incl
 alias gti=git
 
 if which exa > /dev/null
-    alias ls='exa'
-    alias ll='exa -lh --time-style=long-iso'
-    alias llt='exa -lh -s time --time-style=long-iso'
+    alias ls='exa --group-directories-first'
+    alias ll='exa -lh --time-style=long-iso --group-directories-first'
+    alias llt='exa -lh -s time --time-style=long-iso --group-directories-first'
     alias tree="exa --tree"
 else
     if uname -s | grep -iq 'darwin'
