@@ -1,5 +1,4 @@
 update:
-	mkdir -pv ~/.cicada/completers
-	cp -rv ./completers/* ~/.cicada/completers/
-	touch ~/.cicadarc
-	cp -v ./cicadarc ~/.cicadarc
+	mkdir -pv ~/.config/cicada/completers
+	cp -rv ./completers/* ~/.config/cicada/completers/
+	cp -v ./cicadarc ~/.config/cicada/cicadarc

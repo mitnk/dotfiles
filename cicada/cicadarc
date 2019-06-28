@@ -26,7 +26,6 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$HOME/.cargo/bin:/usr/local/sbin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin"
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.6/bin"
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
 export PATH="$PATH:/Library/PostgreSQL/9.6/bin"
 export PATH="$PATH:/Library/PostgreSQL/10/bin"
@@ -66,7 +65,7 @@ alias mmg='mmgo get -id'
 alias mr='mvim --remote'
 alias mtr='mtr -w'
 alias netio="bwm-ng"
-# not work now
+# does not work currently:
 alias 鴀=git
 
 export CICADA_GITBR_PREFIX='['
@@ -74,4 +73,6 @@ export CICADA_GITBR_SUFFIX=']'
 export PROMPT="${COLOR_STATUS}$USER${RESET}@${COLOR_STATUS}$HOSTNAME${RESET}: ${GITBR}${COLOR_STATUS}$CWD${RESET}$ "
 # export PROMPT="${COLOR_STATUS}$${RESET} "
 
-source ~/.cicadarc_local
+if [ -f ~/.cicadarc_local ]
+    source ~/.cicadarc_local
+fi

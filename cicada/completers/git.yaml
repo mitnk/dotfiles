@@ -1,3 +1,4 @@
+- blame
 - ci:
     - --amend
     - --add
@@ -48,6 +49,7 @@
 - diff:
   - --cached
 - clone
+- getpr
 - stash:
   - pop
 - fetch:
@@ -58,6 +60,7 @@
 - checkout:
     - "`git branch -a | tr -d '* ' | grep -v HEAD | sed 's_^.*/__' | sort | uniq`"
 - co:
+    - -b
     - "`git branch -a | tr -d '* ' | grep -v HEAD | sed 's_^.*/__' | sort | uniq`"
 - reset:
     - HEAD
