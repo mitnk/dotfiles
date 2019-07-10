@@ -36,7 +36,7 @@ set backspace=indent,eol,start
 " $ ctags -R .
 
 " For python projects, you may modify the file with this:
-" $ sed -i '/\<i$/d' tags
+" $ ctags -R --languages=python . && sed -i '/\<i$/d' tags
 
 " for go code:
 " $ gotags -R . > tags
