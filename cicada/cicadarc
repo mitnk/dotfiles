@@ -61,6 +61,10 @@ else
     fi
 fi
 
+if which gecho > /dev/null
+    alias echo=gecho
+fi
+
 alias mmg='mmgo get -id'
 alias mr='mvim --remote'
 alias mtr='mtr -w'
@@ -72,6 +76,19 @@ export CICADA_GITBR_PREFIX='['
 export CICADA_GITBR_SUFFIX=']'
 export PROMPT="${COLOR_STATUS}$USER${RESET}@${COLOR_STATUS}$HOSTNAME${RESET}: ${GITBR}${COLOR_STATUS}$CWD${RESET}$ "
 # export PROMPT="${COLOR_STATUS}$${RESET} "
+
+function tab-color() {
+    echo -ne "\033]6;1;bg;red;brightness;$1\a"
+    echo -ne "\033]6;1;bg;green;brightness;$2\a"
+    echo -ne "\033]6;1;bg;blue;brightness;$3\a"
+}
+
+function tab-reset() {
+    echo -ne "\033]6;1;bg;*;default\a"
+}
+
+# make terminal tab color random:
+# tab-color $(shuf -i0-255 -n1) $(shuf -i0-255 -n1) $(shuf -i0-255 -n1)
 
 if [ -f ~/.cicadarc_local ]
     source ~/.cicadarc_local
