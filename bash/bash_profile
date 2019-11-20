@@ -1,4 +1,5 @@
 export CLICOLOR=1
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # fix locale warnnings,
 # use `sudo locale-gen "en_US.UTF-8"` to generate if needed
