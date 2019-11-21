@@ -25,6 +25,7 @@ export GOPATH="$HOME/go"
 
 export PATH="$PATH:$HOME/.cargo/bin:/usr/local/sbin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.8/bin"
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin"
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
 export PATH="$PATH:/Library/PostgreSQL/9.6/bin"
