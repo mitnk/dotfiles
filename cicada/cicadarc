@@ -70,7 +70,7 @@ alias mr='mvim --remote'
 alias mtr='mtr -w'
 alias netio="bwm-ng"
 # cargo install procs
-alias proc='procs -r System Library Applications libexec --sorta Start'
+alias proc='procs --sorta Start -r System Library Applications libexec sbin'
 
 # does not work currently:
 alias 鴀=git
