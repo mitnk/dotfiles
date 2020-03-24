@@ -7449,10 +7449,10 @@ preset_keys:
   redo: {label: 重做, send: Control+y} #≧Android 6.0
   undo: {label: 撤销, send: Control+z} #≧Android 6.0
  #rime状态
-  Mode_switch: {toggle: ascii_mode, send: Mode_switch, states: [ 中 / 英, 英 / 中 ]}
-  Zenkaku_Hankaku: {toggle: full_shape, send: Mode_switch, states: [ 半 / 全, 全 / 半 ]}
-  Henkan: {toggle: simplification, send: Mode_switch, states: [ 繁 / 简, 简 / 繁 ]}
-  Punct_switch: {toggle: ascii_punct, send: Mode_switch, states: [ 。/．, . /。 ]}
+  Mode_switch: {toggle: ascii_mode, send: Mode_switch, states: ['中文', '英文']}
+  Zenkaku_Hankaku: {toggle: full_shape, send: Mode_switch, states: ['半角', '全角']}
+  Henkan: {toggle: simplification, send: Mode_switch, states: ['繁体', '简体']}
+  Punct_switch: {toggle: ascii_punct, send: Mode_switch, states: ['，。', ', .']}
   Candidate_switch: {toggle: _hide_candidate, send: Mode_switch, states: [ 关闭候选, 开启候选]}
   Comment_switch: {toggle: _hide_comment, send: Mode_switch, states: [ 关闭注释, 开启注释]}
   Hint_switch: {toggle: _hide_key_hint, send: Mode_switch, states: [ 关闭助记, 开启助记]}
