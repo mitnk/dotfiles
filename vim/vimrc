@@ -113,6 +113,7 @@ map <silent> <Leader>y "+y
 " Run Python and C/C++ in Vim
 nmap <silent> <Leader>P :w<CR>:!py % > vim-py3.out && echo === PY3 OUTPUT === && cat vim-py3.out && rm -f vim-py3.out<CR>
 nmap <silent> <Leader>G :w<CR>:!gcc -o vim-gcc.out %<CR>:!echo === GCC OUTPUT === && ./vim-gcc.out && rm vim-gcc.out<CR>
+nmap <silent> <Leader>R :w<CR>:!cargo run<CR>
 nmap <silent> <Leader>GG :w<CR>:!g++ -o vim-gcc.out %<CR>:!echo === GCC OUTPUT === && ./vim-gcc.out && rm vim-gcc.out<CR>
 
 nmap <silent> <SPACE> <C-F>
