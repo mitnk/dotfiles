@@ -44,6 +44,13 @@ engine:
     - punct_translator
     - reverse_lookup_translator
     - table_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+simplifier:
+  option_name: simplification
+  opencc_config: "s2t.json"
 
 speller:
   delimiter: " ;'"

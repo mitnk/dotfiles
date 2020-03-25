@@ -7451,7 +7451,7 @@ preset_keys:
  #rime状态
   Mode_switch: {toggle: ascii_mode, send: Mode_switch, states: ['中文', '英文']}
   Zenkaku_Hankaku: {toggle: full_shape, send: Mode_switch, states: ['半角', '全角']}
-  Henkan: {toggle: simplification, send: Mode_switch, states: ['繁体', '简体']}
+  Henkan: {toggle: simplification, send: Mode_switch, states: ['简体', '繁体']}
   Punct_switch: {toggle: ascii_punct, send: Mode_switch, states: ['，。', ', .']}
   Candidate_switch: {toggle: _hide_candidate, send: Mode_switch, states: [ 关闭候选, 开启候选]}
   Comment_switch: {toggle: _hide_comment, send: Mode_switch, states: [ 关闭注释, 开启注释]}
