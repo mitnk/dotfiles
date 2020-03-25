@@ -24,7 +24,7 @@ cp default.custom.yaml  squirrel.custom.yaml ~/Library/Rime/
 1. Install [Trime](https://play.google.com/store/apps/details?id=com.osfans.trime)
 from Google Play Store
 2. Setup & enable Trime on phone.
-3. Run following command:
+3. Run following command (Using Termux, run `sshd` in it):
 ```
 scp -r -P 8022 trime-configs/* x@192.168.0.104:/sdcard/rime/
 ```
