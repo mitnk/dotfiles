@@ -6536,8 +6536,8 @@ preset_keyboards:
     - {click: Kemoji74a, width: 12.5}
     - {click: "", width: 12.5}
     - {click: "", width: 12.5}
-    - {click: "", width: 12.5}
     - {click: Kemoji6z, width: 12.5}
+    - {click: "", width: 12.5}
     - {width: 100, height: *h42}
   emoji71b:
     name: "emoji71"
