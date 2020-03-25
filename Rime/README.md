@@ -27,7 +27,7 @@ from Google Play Store
 2. Run following command:
 
 ```
-scp -P 8022 trime-configs/*.yaml x@192.168.0.104:/sdcard/rime/
+scp -r -P 8022 trime-configs/* x@192.168.0.104:/sdcard/rime/
 ```
 
 3. Re-deploy Trime on your phone.
