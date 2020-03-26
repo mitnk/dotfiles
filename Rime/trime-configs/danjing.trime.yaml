@@ -313,43 +313,43 @@ keyboard: #键盘设置
   O: &kpox 2 
   O: &kpoy 2 
  #伪状态栏
-  H: &h1 36 #伪状态栏高度
-  T: &t2 18 #伪状态栏字号
+  H: &h1 28 #伪状态栏高度
+  T: &t2 16 #伪状态栏字号
   T: &t3 17 #菜单栏字号
- #26、30（4*3+4+55*3+50+5=236）
+ #26、30（4*3+6+50*3+45+5=218）
   G: &g1 4 #水平间距
-  H: &h10 4 #上边距
-  H: &h11 55 #第123行高度
-  H: &h12 50 #第4行高度
+  H: &h10 6 #上边距
+  H: &h11 50 #第123行高度
+  H: &h12 45 #第4行高度
   H: &h13 5 #下边距
   O: &ksox 3 #offrest
   O: &ksoy 1.1 
   O: &khoy -1 
- #36、40（1+42+48*3+44+5=236）
+ #36、40（1+40+44*3+40+5=218）
   H: &h20 1 #上边距
-  H: &h21 42 #第1行高度
-  H: &h22 48 #第234行高度
-  H: &h23 44 #第5行高度
+  H: &h21 40 #第1行高度
+  H: &h22 44 #第234行高度
+  H: &h23 40 #第5行高度
   H: &h24 5 #下边距
   O: &ksoy2 0.7
- #数字、编辑（2*3+2+56*4+4=236）
+ #数字、编辑（2*3+2+51*4+6=218）
   G: &g3 2 #水平间距
   H: &h30 2 #上边距
-  H: &h31 56 #按键高度
-  H: &h32 4 #下边距
- #符号、注音（2+46*5+4=236）
+  H: &h31 51 #按键高度
+  H: &h32 6 #下边距
+ #符号、注音（2+42*5+6=218）
   H: &h40 2 #上边距
-  H: &h41 46 #按键高度
-  H: &h42 4 #下边距
- #五笔画、功能（2*2+3+74*3+7=236）
+  H: &h41 42 #按键高度
+  H: &h42 6 #下边距
+ #五笔画、功能（2*2+3+68*3+7=218）
   G: &g5 2 #水平间距
   H: &h50 3 #上边距
-  H: &h51 74 #按键高度
-  H: &h52 7 #下边距
- #颜文字（2+33*7+4=236）
+  H: &h51 68 #按键高度
+  H: &h52 6 #下边距
+ #颜文字（4+30*7+4=218）
   T: &t4 14 #颜文字键盘字号
-  H: &h60 2 #上边距
-  H: &h61 33 #按键高度
+  H: &h60 4 #上边距
+  H: &h61 30 #按键高度
   H: &h62 4 #下边距
 
 preset_keyboards:
@@ -372,8 +372,8 @@ preset_keyboards:
     - {click: Zenkaku_Hankaku, composing: ' ', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Henkan, composing: ' ', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Punct_switch, composing: ' ', width: 14, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit, composing: ' ', width: 13, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: 'Hide', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: 'Hide', width: 15, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Kedit, composing: ' ', width: 16, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h10} #上边距
     - {click: 'q', long_click: '!', swipe_down: 1, key_back_color: bbc, hilited_key_back_color: bhbc}
     - {click: 'w', long_click: '@', swipe_down: 2, key_back_color: gbc, hilited_key_back_color: ghbc}
@@ -409,9 +409,9 @@ preset_keyboards:
     - {width: 100, height: *g1} #水平间距
     - {click: Knumber, long_click: Menu, composing: Page_Up, width: 12, height: *h12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
     - {click: Ksymbols, long_click: Color_switch, composing: Page_Down, width: 12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
-    - {click: ',', long_click: '<', swipe_up: '!', composing: Sanxuan, width: 12}
+    - {click: ',', long_click: '!', swipe_up: '<', composing: Sanxuan, width: 12}
     - {click: space, width: 37, long_click: Kletter, key_back_color: kgbc, hilited_key_back_color: kghbc}
-    - {click: '.', long_click: '>', swipe_up: '?', composing: Cixuan, width: 12}
+    - {click: '.', long_click: '?', swipe_up: '>', composing: Cixuan, width: 12}
     - {click: Return, long_click: Kfunctions, width: 15, key_symbol_offset_x: 0, key_back_color: hcbc, hilited_key_back_color: hchbc, key_text_color: hctc, hilited_key_text_color: hchtc, key_symbol_color: hcsc, hilited_key_symbol_color: hchsc}
     - {width: 100, height: *h13} #下边距
   letter: #英文键盘
