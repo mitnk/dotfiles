@@ -35,7 +35,6 @@ export PATH="$PATH:/Library/PostgreSQL/10/bin"
 export XDATA_DIR="$HOME/.local/share"
 export VIRTUALENV_HOME="${XDATA_DIR}/venvs"
 
-export CICADA_LOG_FILE="/tmp/cicada-debug.log"
 export HISTORY_SIZE=9999
 export HISTORY_DELETE_DUPS=1
 export NO_EXIT_ON_CTRL_D=1
@@ -92,6 +91,10 @@ function tab-reset() {
 
 # make terminal tab color random:
 # tab-color $(shuf -i0-255 -n1) $(shuf -i0-255 -n1) $(shuf -i0-255 -n1)
+
+if [ -d /tmp ]
+    export CICADA_LOG_FILE="/tmp/cicada-debug.log"
+fi
 
 if [ -f ~/.cicadarc_local ]
     source ~/.cicadarc_local
