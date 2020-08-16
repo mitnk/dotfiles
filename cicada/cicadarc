@@ -41,7 +41,7 @@ export NO_EXIT_ON_CTRL_D=1
 
 if which exa > /dev/null
     alias ls='exa --group-directories-first'
-    alias ll='exa -lh --time-style=long-iso --group-directories-first'
+    alias ll='exa -lh --time-style=long-iso --group-directories-first -s modified'
     alias llt='exa -lh -s time --time-style=long-iso --group-directories-first'
     alias tree="exa --tree"
 else
@@ -60,7 +60,7 @@ fi
 
 alias bash='bash --rcfile ~/.bash_profile'
 alias bat='bat --theme=OneHalfDark'
-alias fd='fd -HI'
+alias fd='fd -HI -E ".git/"'
 alias grep="grep -I --color=auto --exclude-dir=.git --exclude-dir=build"
 alias greppy="grep -I --color=auto --exclude-dir=.git --exclude-dir=build --include=*.py"
 alias gti=git
