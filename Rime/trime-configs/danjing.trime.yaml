@@ -401,14 +401,14 @@ preset_keyboards:
     - {click: 'z', long_click: '`', key_back_color: bbc, hilited_key_back_color: bhbc}
     - {click: 'x', long_click: cut, key_back_color: gbc, hilited_key_back_color: ghbc}
     - {click: 'c', long_click: copy, key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'v', long_click: paste, key_back_color: bbc, hilited_key_back_color: bhbc}
+    - {click: 'v', long_click: '|', key_back_color: bbc, hilited_key_back_color: bhbc}
     - {click: 'b', long_click: '/', key_back_color: gbc, hilited_key_back_color: ghbc}
     - {click: 'n', long_click: '"', key_back_color: rbc, hilited_key_back_color: rhbc}
     - {click: 'm', long_click: "'", key_back_color: bbc, hilited_key_back_color: bhbc}
     - {click: BS, swipe_up: Escape, width: 15}
     - {width: 100, height: *g1} #水平间距
     - {click: Knumber, long_click: Menu, composing: Page_Up, width: 12, height: *h12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
-    - {click: Ksymbols, long_click: Color_switch, composing: Page_Down, width: 12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
+    - {click: Ksymbols, long_click: SwitchTo36, composing: Page_Down, width: 12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
     - {click: ',', long_click: '!', swipe_up: '<', composing: Sanxuan, width: 12}
     - {click: space, width: 37, long_click: Kletter, key_back_color: kgbc, hilited_key_back_color: kghbc}
     - {click: '.', long_click: '?', swipe_up: '>', composing: Cixuan, width: 12}
@@ -527,8 +527,8 @@ preset_keyboards:
     - {click: Zenkaku_Hankaku, composing: ' ', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Henkan, composing: ' ', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Punct_switch, composing: ' ', width: 14, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit, composing: ' ', width: 13, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: 'Hide', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Kedit, composing: ' ', width: 13, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h20} #上边距
     - {click: 1, height: *h21}
     - {click: 2}
@@ -564,13 +564,13 @@ preset_keyboards:
     - {click: 'z', long_click: '`', key_back_color: bbc, hilited_key_back_color: bhbc}
     - {click: 'x', long_click: cut, key_back_color: gbc, hilited_key_back_color: ghbc}
     - {click: 'c', long_click: copy, key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'v', long_click: paste, key_back_color: bbc, hilited_key_back_color: bhbc}
+    - {click: 'v', long_click: '|', key_back_color: bbc, hilited_key_back_color: bhbc}
     - {click: 'b', long_click: '/', key_back_color: gbc, hilited_key_back_color: ghbc}
     - {click: 'n', long_click: '"', key_back_color: rbc, hilited_key_back_color: rhbc}
     - {click: 'm', long_click: "'", key_back_color: bbc, hilited_key_back_color: bhbc}
     - {click: BS, swipe_up: Escape, width: 15}
     - {click: Knumber, long_click: Menu, composing: Page_Up, height: *h23, width: 12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
-    - {click: Ksymbols, long_click: Color_switch, composing: Page_Down, width: 12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
+    - {click: Ksymbols, long_click: SwitchTo26, composing: Page_Down, width: 12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
     - {click: ',', long_click: '<', swipe_up: '!', width: 12}
     - {click: space, width: 37, long_click: Kletter, key_back_color: kgbc, hilited_key_back_color: kghbc}
     - {click: '.', long_click: '>', swipe_up: '?', composing: Cixuan, width: 12}
@@ -7462,6 +7462,8 @@ preset_keys:
   IME_next: {label: 下一输入法, send: LANGUAGE_SWITCH, select: .next} #直接切换到下一输入法
   Schema_switch: {label: 下一方案, send: Control+Shift+1}
   Color_switch: {label: '〓', send: LANGUAGE_SWITCH}
+  SwitchTo36: {label: '36', send: Eisu_toggle, select: qwerty0}
+  SwitchTo26: {label: '26', send: Eisu_toggle, select: qwerty}
   Help: {label: 说明, send: Help}
   Info: {label: 关于, send: INFO}
   Menu: {label: '◉', send: Menu}
