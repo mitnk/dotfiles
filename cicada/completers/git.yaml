@@ -56,7 +56,7 @@
   - origin
   - upstream
   - "`git branch -a | tr -d '* ' | grep -v HEAD | sed 's_^.*/__' | sort | uniq`"
-- fetch-tags
+- tags-fetch
 - checkout:
     - "`git branch -a | tr -d '* ' | grep -v HEAD | sed 's_^.*/__' | sort | uniq`"
 - co:

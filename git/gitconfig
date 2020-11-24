@@ -34,7 +34,7 @@
     su = submodule update --init
 
     # fetch all tags from remote
-    fetch-tags = fetch --tags
+    tags-fetch = fetch --tags
 
     # fetch PR to a new branch, e.g.:
     # git fetch upstream 17
