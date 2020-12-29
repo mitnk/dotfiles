@@ -77,6 +77,12 @@ endif
 " Display tabs and trailing spaces visually  
 set list listchars=tab:>-,trail:■
 
+" special handle for C files
+augroup ft_c
+    au!
+    au Filetype c setlocal listchars=tab:\ \ 
+augroup END
+
 " Highlight column 80
 if exists('+colorcolumn')
   set colorcolumn=80
