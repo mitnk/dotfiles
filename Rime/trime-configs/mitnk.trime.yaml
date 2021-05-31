@@ -69,7 +69,7 @@ style:
   key_long_text_size: 16 #长标签字号
   key_text_size: 20 #键字号
   key_width: 10.0 #键宽，占屏幕宽的百分比
-  keyboards: [.default, qwerty, qwerty0, default, functions, edit, letter, number, symbols, symbols0, symbols1, symbols12, symbols2, symbols22, symbols23, symbols24, symbols25, symbols3, symbols32, symbols33, symbols34, symbols4, symbols42, symbols5, symbols52, symbols53, symbols6, symbols62, symbols63, symbols64, symbols65, symbols66, symbols67, symbols7, symbols72, symbolsx, symbolsx2, symbolsx3, symbolsx4, symbolsx5, kao_fond, kao_sad, kao_mad, kao_astonished, kao_impotent, kao_happy] #键盘配置：自动键盘、字母、数字、符号
+  keyboards: [.default, default, qwerty36, functions, edit, letter, number, symbols, symbols0, symbols1, symbols12, symbols2, symbols22, symbols23, symbols24, symbols25, symbols3, symbols32, symbols33, symbols34, symbols4, symbols42, symbols5, symbols52, symbols53, symbols6, symbols62, symbols63, symbols64, symbols65, symbols66, symbols67, symbols7, symbols72, symbolsx, symbolsx2, symbolsx3, symbolsx4, symbolsx5, kao_fond, kao_sad, kao_mad, kao_astonished, kao_impotent, kao_happy] #键盘配置：自动键盘、字母、数字、符号
   label_font: label.ttf #编标签字型
   latin_font: latin.ttf #西文字型
   round_corner: 0 #按键圆角半径
@@ -221,7 +221,8 @@ keyboard: #键盘设置
   H: &h62 4 #下边距
 
 preset_keyboards:
-  qwerty:
+
+  default:
     name: 二十六键
     author: 单单
     ascii_mode: 0
@@ -283,20 +284,20 @@ preset_keyboards:
     - {click: Return, long_click: Kfunctions, width: 15, key_symbol_offset_x: 0, key_back_color: hcbc, hilited_key_back_color: hchbc, key_text_color: hctc, hilited_key_text_color: hchtc, key_symbol_color: hcsc, hilited_key_symbol_color: hchsc}
     - {width: 100, height: *h13} #下边距
   letter: #英文键盘
-    __include: /preset_keyboards/qwerty
+    __include: /preset_keyboards/default
     __patch:
       "ascii_mode": 1
       "lock": false
       "keys/@43/long_click": Back1
   terra_pinyin: #地球拼音
-    __include: /preset_keyboards/qwerty
+    __include: /preset_keyboards/default
     __patch:
       "keys/@40/composing": tone1
       "keys/@41/composing": tone2
       "keys/@42/composing": tone3
       "keys/@44/composing": tone4
   xkyb: #星空一笔
-    __include: /preset_keyboards/qwerty
+    __include: /preset_keyboards/default
     __patch:
       "keys/@30/composing": Cixuan
       "keys/@44/composing": '.'
@@ -313,7 +314,7 @@ preset_keyboards:
   xklbzv: #星空两笔zv
     __include: /preset_keyboards/xkyb
 
-  qwerty0:
+  qwerty36:
     name: 三十六键
     author: 单单
     ascii_mode: 0
@@ -382,76 +383,6 @@ preset_keyboards:
     - {click: Return, long_click: Kfunctions, width: 15, key_symbol_offset_x: 0, key_back_color: hcbc, hilited_key_back_color: hchbc, key_text_color: hctc, hilited_key_text_color: hchtc, key_symbol_color: hcsc, hilited_key_symbol_color: hchsc}
     - {width: 100, height: *h24} #下边距
 
-  default:
-    name: 四十键
-    author: 单单
-    ascii_mode: 0
-    label_transform: uppercase #uppercase|none 中文模式下的字母标签自动大写
-    lock: true #切换程序时记忆键盘
-    width: 10
-    height: *h22
-    key_symbol_offset_x: *ksox
-    key_symbol_offset_y: *ksoy2
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    key_hint_offset_y: *khoy
-    keys: 
-    - {click: '', width: 1, height: *h1, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Mode_switch, composing: ' ', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Zenkaku_Hankaku, composing: ' ', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Henkan, composing: ' ', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Punct_switch, composing: ' ', width: 14, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit, composing: ' ', width: 13, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: 'Hide', width: 18, key_text_size: *t2, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h20} #上边距
-    - {click: 1, height: *h21}
-    - {click: 2}
-    - {click: 3}
-    - {click: 4}
-    - {click: 5}
-    - {click: 6}
-    - {click: 7}
-    - {click: 8}
-    - {click: 9}
-    - {click: 0}
-    - {click: 'q', long_click: '!', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'w', long_click: '@', key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: 'e', long_click: '#', key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'r', long_click: '$', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 't', long_click: '%', key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: 'y', long_click: '^', key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'u', long_click: '&', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'i', long_click: '*', key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: 'o', long_click: '(', key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'p', long_click: ')', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'a', long_click: select_all, key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 's', long_click: '~', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'd', long_click: '-', key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: 'f', long_click: '_', key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'g', long_click: '+', hint: "✜", swipe_left: Left, swipe_right: Right, swipe_up: Up, swipe_down: Down, key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'h', long_click: '[]{Left}', swipe_left: '[', swipe_right: ']', key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: 'j', long_click: '{}{Left}', swipe_left: '{', swipe_right: '}', key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'k', long_click: '"', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'l', long_click: "'", key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: ';', long_click: ':', key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'z', long_click: '`', key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: 'x', long_click: cut, key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'c', long_click: copy, key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'v', long_click: paste, key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: 'b', long_click: '+', key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: 'n', long_click: '\', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'm', long_click: '|', key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: ',', long_click: '<', key_back_color: rbc, hilited_key_back_color: rhbc}
-    - {click: '.', long_click: '>', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: '/', long_click: '?', key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: Shift_L, composing: Fenci, width: 12, height: *h23}
-    - {click: Knumber, long_click: Menu, composing: Page_Up, width: 12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
-    - {click: Ksymbols, long_click: Color_switch, composing: Page_Down, width: 12, key_symbol_color: gnsc, hilited_key_symbol_color: gnhsc, key_symbol_offset_x: 0}
-    - {click: space, width: 36, long_click: Kletter, key_back_color: kgbc, hilited_key_back_color: kghbc}
-    - {click: BS, swipe_up: Escape, width: 13}
-    - {click: Return, long_click: Kfunctions, width: 15, key_symbol_offset_x: 0, key_back_color: hcbc, hilited_key_back_color: hchbc, key_text_color: hctc, hilited_key_text_color: hchtc, key_symbol_color: hcsc, hilited_key_symbol_color: hchsc}
-    - {width: 100, height: *h24} #下边距
-
   functions:
     name: 功能
     author: 单单
@@ -479,7 +410,7 @@ preset_keyboards:
     - {click: VOICE_ASSIST}
     - {width: 100, height: *g5} #水平间距
     - {click: Kqwerty}
-    - {click: Kqwerty0}
+    - {click: Kqwerty36}
     - {width: 100, height: *h52} #下边距
 
   edit:
@@ -2566,8 +2497,8 @@ preset_keys:
   IME_next: {label: 下一输入法, send: LANGUAGE_SWITCH, select: .next} #直接切换到下一输入法
   Schema_switch: {label: 下一方案, send: Control+Shift+1}
   Color_switch: {label: '〓', send: LANGUAGE_SWITCH}
-  SwitchTo36: {label: '36', send: Eisu_toggle, select: qwerty0}
-  SwitchTo26: {label: '26', send: Eisu_toggle, select: qwerty}
+  SwitchTo36: {label: '36', send: Eisu_toggle, select: qwerty36}
+  SwitchTo26: {label: '26', send: Eisu_toggle, select: default}
   Help: {label: 说明, send: Help}
   Info: {label: 关于, send: INFO}
   Menu: {label: '◉', send: Menu}
@@ -2584,8 +2515,8 @@ preset_keys:
   tone3: {label: "ˇ", text: ","}
   tone4: {label: "ˋ", text: '\'}
  #自定义
-  Kqwerty: {label: 二十六键, send: Eisu_toggle, select: qwerty}
-  Kqwerty0: {label: 三十六键, send: Eisu_toggle, select: qwerty0}
+  Kqwerty: {label: 二十六键, send: Eisu_toggle, select: default}
+  Kqwerty36: {label: 三十六键, send: Eisu_toggle, select: qwerty36}
   Kfunctions: {label: '❖', send: Eisu_toggle, select: functions}
   Kfunctions1: {label: 功能, send: Eisu_toggle, select: functions}
   Kedit: {label: '❖', send: Eisu_toggle, select: edit}
