@@ -691,7 +691,7 @@ preset_keyboards:
     - {click: '"'}
     - {click: '^'}
     - {click: '`'}
-    - {click: Ksymbols12d, width: 16, key_text_color: fyhtc, hilited_key_text_color: fyhtc}
+    - {click: '' }
     - {click: Ksymbols3, width: 16}
     - {click: ''}
     - {click: ''}
