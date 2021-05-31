@@ -30,3 +30,4 @@ scp -r -P 8022 trime-configs/* x@192.168.0.104:/sdcard/rime/
 ```
 4. Re-deploy Trime on your phone.
 5. Select Danjing / 炫彩 from Config page.
+6. Select mitnk / 炫彩 for speed (removed emoji etc)
