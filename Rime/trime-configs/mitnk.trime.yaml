@@ -69,7 +69,7 @@ style:
   key_long_text_size: 16 #长标签字号
   key_text_size: 20 #键字号
   key_width: 10.0 #键宽，占屏幕宽的百分比
-  keyboards: [.default, default, qwerty36, functions, edit, letter, number, symbols, symbols0, symbols1, symbols12, symbols2, symbols22, symbols23, symbols24, symbols25, symbols3, symbols32, symbols33, symbols34, symbols4, symbols42, symbols5, symbols52, symbols53, symbols6, symbols62, symbols63, symbols64, symbols65, symbols66, symbols67, symbols7, symbols72, symbolsx, symbolsx2, symbolsx3, symbolsx4, symbolsx5, kao_fond, kao_sad, kao_mad, kao_astonished, kao_impotent, kao_happy] #键盘配置：自动键盘、字母、数字、符号
+  keyboards: [.default, default, qwerty36, functions, edit, letter, number, symbols, symbols0, symbols1, symbols12, symbols2, symbols22, symbols23, symbols24, symbols25, symbols3, symbols32, symbols33, symbols34, symbols4, symbols42, symbols5, symbols52, symbols53, symbols6, symbols62, symbols63, symbols64, symbols65, symbols66, symbols67, symbols7, symbols72] #键盘配置：自动键盘、字母、数字、符号
   label_font: label.ttf #编标签字型
   latin_font: latin.ttf #西文字型
   round_corner: 0 #按键圆角半径
@@ -268,8 +268,8 @@ preset_keyboards:
     - {width: 100, height: *g1} #水平间距
     - {click: Shift_L, composing: Fenci, width: 15}
     - {click: 'z', long_click: '`', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'x', long_click: cut, key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: 'c', long_click: copy, key_back_color: rbc, hilited_key_back_color: rhbc}
+    - {click: 'x', long_click: '<', key_back_color: gbc, hilited_key_back_color: ghbc}
+    - {click: 'c', long_click: '>', key_back_color: rbc, hilited_key_back_color: rhbc}
     - {click: 'v', long_click: '|', key_back_color: bbc, hilited_key_back_color: bhbc}
     - {click: 'b', long_click: '/', key_back_color: gbc, hilited_key_back_color: ghbc}
     - {click: 'n', long_click: '"', key_back_color: rbc, hilited_key_back_color: rhbc}
@@ -368,8 +368,8 @@ preset_keyboards:
     - {click: 'l', long_click: ';', key_back_color: rbc, hilited_key_back_color: rhbc}
     - {click: Shift_L, composing: Fenci, width: 15}
     - {click: 'z', long_click: '`', key_back_color: bbc, hilited_key_back_color: bhbc}
-    - {click: 'x', long_click: cut, key_back_color: gbc, hilited_key_back_color: ghbc}
-    - {click: 'c', long_click: copy, key_back_color: rbc, hilited_key_back_color: rhbc}
+    - {click: 'x', long_click: '<', key_back_color: gbc, hilited_key_back_color: ghbc}
+    - {click: 'c', long_click: '>', key_back_color: rbc, hilited_key_back_color: rhbc}
     - {click: 'v', long_click: '|', key_back_color: bbc, hilited_key_back_color: bhbc}
     - {click: 'b', long_click: '/', key_back_color: gbc, hilited_key_back_color: ghbc}
     - {click: 'n', long_click: '"', key_back_color: rbc, hilited_key_back_color: rhbc}
@@ -394,8 +394,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h50} #上边距
@@ -424,8 +424,8 @@ preset_keyboards:
     keys: 
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h30} #上边距
@@ -465,8 +465,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h30} #上边距
@@ -510,8 +510,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -562,8 +562,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -614,8 +614,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -666,8 +666,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -718,8 +718,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -770,8 +770,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -822,8 +822,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -874,8 +874,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -926,8 +926,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -978,8 +978,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1030,8 +1030,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1082,8 +1082,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1134,8 +1134,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1186,8 +1186,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1238,8 +1238,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1290,8 +1290,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1342,8 +1342,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1394,8 +1394,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1446,8 +1446,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1498,8 +1498,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1550,8 +1550,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1602,8 +1602,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1654,8 +1654,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1706,8 +1706,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1758,8 +1758,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1810,8 +1810,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1829,21 +1829,18 @@ preset_keyboards:
     - {click: 'ʌ', key_text_size: *t1}
     - {click: 'ɒ', key_text_size: *t1}
     - {click: Ksymbols7u, width: 16, key_text_color: fyhtc, hilited_key_text_color: fyhtc}
-    - {click: Ksymbols8, width: 16}
     - {click: 'ʊ', key_text_size: *t1}
     - {click: 'ə', key_text_size: *t1}
     - {click: 'eɪ', key_text_size: *t1}
     - {click: 'aɪ', key_text_size: *t1}
     - {click: 'ɔɪ', key_text_size: *t1}
     - {click: Ksymbols72d, width: 16}
-    - {click: Ksymbols9, width: 16}
     - {click: 'əʊ', key_text_size: *t1}
     - {click: 'aʊ', key_text_size: *t1}
     - {click: 'ɪə', key_text_size: *t1}
     - {click: 'eə', key_text_size: *t1}
     - {click: 'ʊə', key_text_size: *t1}
     - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16}
     - {click: 'p', key_text_size: *t1}
     - {click: 't', key_text_size: *t1}
     - {click: 'k', key_text_size: *t1}
@@ -1862,8 +1859,8 @@ preset_keyboards:
     keys:
     - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
     - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Hugo, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
+    - {click: Wang, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
     - {width: 100, height: *h40}
@@ -1881,21 +1878,18 @@ preset_keyboards:
     - {click: 'g', key_text_size: *t1}
     - {click: 'v', key_text_size: *t1}
     - {click: Ksymbols7u, width: 16}
-    - {click: Ksymbols8, width: 16}
     - {click: 'ð', key_text_size: *t1}
     - {click: 'z', key_text_size: *t1}
     - {click: 'ʒ', key_text_size: *t1}
     - {click: 'r', key_text_size: *t1}
     - {click: 'dʒ', key_text_size: *t1}
     - {click: Ksymbols72d, width: 16, key_text_color: fyhtc, hilited_key_text_color: fyhtc}
-    - {click: Ksymbols9, width: 16}
     - {click: 'dz', key_text_size: *t1}
     - {click: 'dr', key_text_size: *t1}
     - {click: 'j', key_text_size: *t1}
     - {click: 'w', key_text_size: *t1}
     - {click: 'm', key_text_size: *t1}
     - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16}
     - {click: 'n', key_text_size: *t1}
     - {click: 'ŋ', key_text_size: *t1}
     - {click: 'l', key_text_size: *t1}
@@ -1904,525 +1898,6 @@ preset_keyboards:
     - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
     - {width: 100, height: *h42}
 
-  symbols8:
-    name: 希俄1
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: 'α'}
-    - {click: 'β'}
-    - {click: 'γ'}
-    - {click: 'δ'}
-    - {click: 'ε'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: 'ζ'}
-    - {click: 'η'}
-    - {click: 'θ'}
-    - {click: 'ι'}
-    - {click: 'κ'}
-    - {click: Ksymbols8u, width: 16, key_text_color: fyhtc, hilited_key_text_color: fyhtc}
-    - {click: Ksymbols8, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: 'λ'}
-    - {click: 'μ'}
-    - {click: 'ν'}
-    - {click: 'ξ'}
-    - {click: 'ο'}
-    - {click: Ksymbols82d, width: 16}
-    - {click: Ksymbols9, width: 16}
-    - {click: 'π'}
-    - {click: 'ρ'}
-    - {click: 'σ'}
-    - {click: 'τ'}
-    - {click: 'υ'}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16}
-    - {click: 'φ'}
-    - {click: 'χ'}
-    - {click: 'ψ'}
-    - {click: 'ω'}
-    - {click: ''}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
-
-  symbols82:
-    name: 希俄2
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: 'Α'}
-    - {click: 'Β'}
-    - {click: 'Γ'}
-    - {click: 'Δ'}
-    - {click: 'Ε'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: 'Ζ'}
-    - {click: 'Η'}
-    - {click: 'Θ'}
-    - {click: 'Ι'}
-    - {click: 'Κ'}
-    - {click: Ksymbols8u, width: 16}
-    - {click: Ksymbols8, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: 'Λ'}
-    - {click: 'Μ'}
-    - {click: 'Ν'}
-    - {click: 'Ξ'}
-    - {click: 'Ο'}
-    - {click: Ksymbols83d, width: 16}
-    - {click: Ksymbols9, width: 16}
-    - {click: 'Π'}
-    - {click: 'Ρ'}
-    - {click: 'Σ'}
-    - {click: 'Τ'}
-    - {click: 'Υ'}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16}
-    - {click: 'Φ'}
-    - {click: 'Χ'}
-    - {click: 'Ψ'}
-    - {click: 'Ω'}
-    - {click: ''}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
-
-  symbols9:
-    name: 拉丁1
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: 'Ä'}
-    - {click: 'Æ'}
-    - {click: 'Å'}
-    - {click: 'À'}
-    - {click: 'Á'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: 'Â'}
-    - {click: 'Ã'}
-    - {click: 'Ç'}
-    - {click: 'È'}
-    - {click: 'É'}
-    - {click: Ksymbols9u, width: 16, key_text_color: fyhtc, hilited_key_text_color: fyhtc}
-    - {click: Ksymbols8, width: 16}
-    - {click: 'Ê'}
-    - {click: 'Ë'}
-    - {click: 'Ð'}
-    - {click: 'Ì'}
-    - {click: 'Í'}
-    - {click: Ksymbols92d, width: 16}
-    - {click: Ksymbols9, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: 'Î'}
-    - {click: 'Ï'}
-    - {click: 'Ö'}
-    - {click: 'Ø'}
-    - {click: 'Ò'}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16}
-    - {click: 'Ó'}
-    - {click: 'Ô'}
-    - {click: 'Õ'}
-    - {click: 'Ñ'}
-    - {click: 'Ù'}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
-
-  symbols92:
-    name: 拉丁2
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: 'Ú'}
-    - {click: 'Û'}
-    - {click: 'Ü'}
-    - {click: 'Ý'}
-    - {click: 'Þ'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: 'ä'}
-    - {click: 'æ'}
-    - {click: 'å'}
-    - {click: 'à'}
-    - {click: 'á'}
-    - {click: Ksymbols9u, width: 16}
-    - {click: Ksymbols8, width: 16}
-    - {click: 'â'}
-    - {click: 'ã'}
-    - {click: 'ç'}
-    - {click: 'è'}
-    - {click: 'é'}
-    - {click: Ksymbols93d, width: 16}
-    - {click: Ksymbols9, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: 'ê'}
-    - {click: 'ë'}
-    - {click: 'ð'}
-    - {click: 'ì'}
-    - {click: 'í'}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16}
-    - {click: 'î'}
-    - {click: 'ï'}
-    - {click: 'ö'}
-    - {click: 'ø'}
-    - {click: 'ò'}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
-
-  symbols93:
-    name: 拉丁3
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: 'ó'}
-    - {click: 'ô'}
-    - {click: 'õ'}
-    - {click: 'ñ'}
-    - {click: 'ù'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: 'ú'}
-    - {click: 'û'}
-    - {click: 'ü'}
-    - {click: 'ý'}
-    - {click: 'þ'}
-    - {click: Ksymbols92u, width: 16}
-    - {click: Ksymbols8, width: 16}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: Ksymbols93d, width: 16, key_text_color: fyhtc, hilited_key_text_color: fyhtc}
-    - {click: Ksymbols9, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
-
-  symbolsx:
-    name: 制表1
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: '─'}
-    - {click: '┄'}
-    - {click: '┈'}
-    - {click: '━'}
-    - {click: '┅'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: '┉'}
-    - {click: '│'}
-    - {click: '┆'}
-    - {click: '┊'}
-    - {click: '┃'}
-    - {click: Ksymbolsxu, width: 16, key_text_color: fyhtc, hilited_key_text_color: fyhtc}
-    - {click: Ksymbols8, width: 16}
-    - {click: '┇'}
-    - {click: '┋'}
-    - {click: '┌'}
-    - {click: '┐'}
-    - {click: '┍'}
-    - {click: Ksymbolsx2d, width: 16}
-    - {click: Ksymbols9, width: 16}
-    - {click: '┑'}
-    - {click: '┎'}
-    - {click: '┒'}
-    - {click: '┏'}
-    - {click: '┓'}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: '└'}
-    - {click: '┘'}
-    - {click: '┕'}
-    - {click: '┙'}
-    - {click: '┖'}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
-
-  symbolsx2:
-    name: 制表2
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: '┚'}
-    - {click: '┗'}
-    - {click: '┛'}
-    - {click: '├'}
-    - {click: '┝'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: '┞'}
-    - {click: '┟'}
-    - {click: '┠'}
-    - {click: '┡'}
-    - {click: '┢'}
-    - {click: Ksymbolsxu, width: 16}
-    - {click: Ksymbols8, width: 16}
-    - {click: '┣'}
-    - {click: '┤'}
-    - {click: '┥'}
-    - {click: '┦'}
-    - {click: '┧'}
-    - {click: Ksymbolsx3d, width: 16}
-    - {click: Ksymbols9, width: 16}
-    - {click: '┨'}
-    - {click: '┩'}
-    - {click: '┪'}
-    - {click: '┫'}
-    - {click: '┬'}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: '┭'}
-    - {click: '┮'}
-    - {click: '┯'}
-    - {click: '┰'}
-    - {click: '┱'}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
-
-  symbolsx3:
-    name: 制表3
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: '┲'}
-    - {click: '┳'}
-    - {click: '┴'}
-    - {click: '┵'}
-    - {click: '┶'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: '┷'}
-    - {click: '┸'}
-    - {click: '┹'}
-    - {click: '┶'}
-    - {click: '┻'}
-    - {click: Ksymbolsx2u, width: 16}
-    - {click: Ksymbols8, width: 16}
-    - {click: '┼'}
-    - {click: '┽'}
-    - {click: '┾'}
-    - {click: '┿'}
-    - {click: '╀'}
-    - {click: Ksymbolsx4d, width: 16}
-    - {click: Ksymbols9, width: 16}
-    - {click: '╁'}
-    - {click: '╂'}
-    - {click: '╃'}
-    - {click: '╄'}
-    - {click: '╅'}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: '╆'}
-    - {click: '╇'}
-    - {click: '╈'}
-    - {click: '╉'}
-    - {click: '╊'}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
-
-  symbolsx4:
-    name: 制表4
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: '╋'}
-    - {click: '═'}
-    - {click: '║'}
-    - {click: '╒'}
-    - {click: '╓'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: '╔'}
-    - {click: '╘'}
-    - {click: '╕'}
-    - {click: '╙'}
-    - {click: '╖'}
-    - {click: Ksymbolsx3u, width: 16}
-    - {click: Ksymbols8, width: 16}
-    - {click: '╚'}
-    - {click: '╗'}
-    - {click: '╛'}
-    - {click: '╜'}
-    - {click: '╝'}
-    - {click: Ksymbolsx5d, width: 16}
-    - {click: Ksymbols9, width: 16}
-    - {click: '╞'}
-    - {click: '╟'}
-    - {click: '╠'}
-    - {click: '╡'}
-    - {click: '╢'}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: '╣'}
-    - {click: '╤'}
-    - {click: '╥'}
-    - {click: '╦'}
-    - {click: '╧'}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
-
-  symbolsx5:
-    name: 制表5
-    author: 单单
-    width: 13.6
-    height: *h41
-    key_press_offset_x: *kpox
-    key_press_offset_y: *kpoy
-    keys:
-    - {click: Ksymbols0, width: 16.6, height: *h1, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxhbc, hilited_key_back_color: hxhbc}
-    - {click: Knumber1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kemoji, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kkao, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kedit1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {click: Kfunctions1, width: 16.6, key_text_size: *t3, key_text_color: hxtc, hilited_key_text_color: hxhtc, key_back_color: hxbc, hilited_key_back_color: hxhbc}
-    - {width: 100, height: *h40}
-    - {click: Ksymbols4u, width: 16}
-    - {click: '╨'}
-    - {click: '╩'}
-    - {click: '╪'}
-    - {click: '╫'}
-    - {click: '╬'}
-    - {click: Back, width: 16}
-    - {click: Ksymbols7, width: 16}
-    - {click: '╭'}
-    - {click: '╮'}
-    - {click: '╱'}
-    - {click: '╲'}
-    - {click: '╳'}
-    - {click: Ksymbolsx4u, width: 16}
-    - {click: Ksymbols8, width: 16}
-    - {click: '╰'}
-    - {click: '╯'}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: Ksymbolsx5d, width: 16, key_text_color: fyhtc, hilited_key_text_color: fyhtc}
-    - {click: Ksymbols9, width: 16}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: BackSpace, width: 16}
-    - {click: Ksymbolsx, width: 16, key_back_color: fcdbc, hilited_key_back_color: fcdhbc, key_text_color: fcdtc, hilited_key_text_color: fcdhtc}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: ''}
-    - {click: Return, width: 16, key_back_color: fhcbc, hilited_key_back_color: fhchbc, key_text_color: fhctc, hilited_key_text_color: fhchtc}
-    - {width: 100, height: *h42}
 
 
 #——————————————————————————
@@ -2437,19 +1912,6 @@ preset_keys:
   CommitComment: {label: 编码, send: Control+Shift+Return}
   DeleteCandidate: {label: 删词, send: Control+Delete}
  #trime命令
-  Date: {label: 日期, send: function, command: date, option: "yyyy-MM-dd"}
-  ChineseDate: {label: 农历, send: function, command: date, option: "zh_CN@calendar=chinese"} #农历等日期(≧Android 7.0)：date 语言@calendar=曆法 格式。具體參見https://developer.android.com/reference/android/icu/util/Calendar.html
-  Time: {label: 时间, send: function, command: date, option: "HH:mm:ss"} #时间： date 格式
-  TrimeApp: {label: 同文, send: function, command: run, option: "com.osfans.trime"} #运行程序: run 包名
-  TrimeCmp: {label: 同文组件, send: function, command: run, option: "com.osfans.trime/.Pref"} #运行程序指定組件: run 包名/組件名
-  Homepage: {label: 同文主页, send: function, command: run, option: "https://github.com/osfans/trime"} #查看網页: run 網址
-  Wiki: {label: 维基, send: function, command: run, option: "https://zh.wikipedia.org/wiki/%s"} #搜索網页: %s或者%1$s为當前字符
-  Google: {label: 谷歌, send: function, command: run, option: "https://www.google.com/search?q=%s"} #搜索網页: %s或者%1$s为當前字符
-  MoeDict: {label: 萌典, send: function, command: run, option: "https://www.moedict.tw/%3$s"} #搜索網页: %3$s为光標前字符
-  Baidu: {label: 百度搜索, send: function, command: run, option: "https://www.baidu.com/s?wd=%4$s"} #搜索網页: %4s为光標前所有字符
-  Zdic: {label: 汉典, send: function, command: run, option: "http://www.zdic.net/sousuo/?q=%1$s"} #搜索網页: %s或者%1$s为當前字符
-  Zdic2: {label: 汉典, send: function, command: run, option: "http://www.zdic.net/sousuo/?q=%2$s"} #搜索網页: %2$s为當前输入的编码
-  WebSearch: {label: 搜索网页, send: function, command: web_search, option: "%4$s"} #搜索，其他view、dial、edit、search等intent，參考安卓的intent文檔：https://developer.android.com/reference/android/content/Intent.html
   Deploy: {label: 部署, send: function, command: broadcast, option: "com.osfans.trime.deploy"}
   Sync: {label: 同步, send: function, command: broadcast, option: "com.osfans.trime.sync"}
  #编辑
@@ -2578,28 +2040,5 @@ preset_keys:
   Ksymbols7u: {label: '▲', send: Eisu_toggle, select: symbols7}
   Ksymbols7d: {label: '▼', send: Eisu_toggle, select: symbols7}
   Ksymbols72d: {label: '▼', send: Eisu_toggle, select: symbols72}
-  Ksymbols8: {label: 希俄, send: Eisu_toggle, select: symbols8}
-  Ksymbols8u: {label: '▲', send: Eisu_toggle, select: symbols8}
-  Ksymbols82u: {label: '▲', send: Eisu_toggle, select: symbols82}
-  Ksymbols82d: {label: '▼', send: Eisu_toggle, select: symbols82}
-  Ksymbols83u: {label: '▲', send: Eisu_toggle, select: symbols83}
-  Ksymbols83d: {label: '▼', send: Eisu_toggle, select: symbols83}
-  Ksymbols84u: {label: '▲', send: Eisu_toggle, select: symbols84}
-  Ksymbols84d: {label: '▼', send: Eisu_toggle, select: symbols84}
-  Ksymbols85d: {label: '▼', send: Eisu_toggle, select: symbols85}
-  Ksymbols9: {label: 拉丁, send: Eisu_toggle, select: symbols9}
-  Ksymbols9u: {label: '▲', send: Eisu_toggle, select: symbols9}
-  Ksymbols92u: {label: '▲', send: Eisu_toggle, select: symbols92}
-  Ksymbols92d: {label: '▼', send: Eisu_toggle, select: symbols92}
-  Ksymbols93d: {label: '▼', send: Eisu_toggle, select: symbols93}
-  Ksymbolsx: {label: 制表, send: Eisu_toggle, select: symbolsx}
-  Ksymbolsxu: {label: '▲', send: Eisu_toggle, select: symbolsx}
-  Ksymbolsx2u: {label: '▲', send: Eisu_toggle, select: symbolsx2}
-  Ksymbolsx2d: {label: '▼', send: Eisu_toggle, select: symbolsx2}
-  Ksymbolsx3u: {label: '▲', send: Eisu_toggle, select: symbolsx3}
-  Ksymbolsx3d: {label: '▼', send: Eisu_toggle, select: symbolsx3}
-  Ksymbolsx4u: {label: '▲', send: Eisu_toggle, select: symbolsx4}
-  Ksymbolsx4d: {label: '▼', send: Eisu_toggle, select: symbolsx4}
-  Ksymbolsx5d: {label: '▼', send: Eisu_toggle, select: symbolsx5}
 
 # The End (＞﹏＜)
