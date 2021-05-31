@@ -541,10 +541,8 @@ preset_keyboards:
     - {click: Theme_settings}
     - {click: VOICE_ASSIST}
     - {width: 100, height: *g5} #水平间距
-    - {click: Kqwerty_}
     - {click: Kqwerty}
     - {click: Kqwerty0}
-    - {click: Kdefault}
     - {width: 100, height: *h52} #下边距
 
   edit:
@@ -2650,9 +2648,9 @@ preset_keys:
   tone4: {label: "ˋ", text: '\'}
  #自定义
   Kqwerty: {label: 二十六键, send: Eisu_toggle, select: qwerty}
-  Kqwerty_: {label: 三十键, send: Eisu_toggle, select: qwerty_}
+  Kqwerty30: {label: 三十键, send: Eisu_toggle, select: qwerty_}
   Kqwerty0: {label: 三十六键, send: Eisu_toggle, select: qwerty0}
-  Kdefault: {label: 四十键, send: Eisu_toggle, select: default}
+  Kqwerty40: {label: 四十键, send: Eisu_toggle, select: default}
   Kfunctions: {label: '❖', send: Eisu_toggle, select: functions}
   Kfunctions1: {label: 功能, send: Eisu_toggle, select: functions}
   Kedit: {label: '❖', send: Eisu_toggle, select: edit}
