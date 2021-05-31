@@ -44,6 +44,8 @@
     ours = "!f() { git checkout --ours $@ && git add $@; }; f"
     # Checkout their version of a file and add it
     theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+    misc = "!f() { git commit -anm misc ; }; f"
+    miscp = "!f() { git commit -anm misc && git pub ; }; f"
 
 [fetch]
     prune = true

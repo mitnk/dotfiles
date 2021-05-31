@@ -97,6 +97,10 @@ if [ -d /tmp ]
     export CICADA_LOG_FILE="/tmp/cicada-debug.log"
 fi
 
+alias ipy=ipython
+alias py=python3
+alias md5=md5sum
+
 if [ -f ~/.cicadarc_local ]
     source ~/.cicadarc_local
 fi
