@@ -1,0 +1,8 @@
+- cluster:
+  - list
+  - create
+  - delete
+  - start
+  - stop
+- image
+- help

@@ -1,3 +1,4 @@
+export CICADA_LOG_FILE=""
 export CLICOLOR=1
 
 # fix locale warnnings,
@@ -17,7 +18,6 @@ export COPYFILE_DISABLE=1
 export LESS="--no-init --quit-if-one-screen --RAW-CONTROL-CHARS"
 
 export ETCDCTL_API=3
-
 
 export RUST_BACKTRACE='full'
 export GOROOT="/usr/local/go"
@@ -93,13 +93,11 @@ function tab-reset() {
 # make terminal tab color random:
 # tab-color $(shuf -i0-255 -n1) $(shuf -i0-255 -n1) $(shuf -i0-255 -n1)
 
-if [ -d /tmp ]
-    export CICADA_LOG_FILE="/tmp/cicada-debug.log"
-fi
-
 alias ipy=ipython
 alias py=python3
 alias md5=md5sum
+
+# export CICADA_LOG_FILE="/tmp/cicada-debug.log"
 
 if [ -f ~/.cicadarc_local ]
     source ~/.cicadarc_local

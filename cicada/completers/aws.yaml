@@ -1,0 +1,21 @@
+- autoscaling:
+  - describe-auto-scaling-groups
+  - describe-launch-configurations
+  - delete-auto-scaling-group
+  - --auto-scaling-group-name
+  - delete-launch-configuration
+  - --launch-configuration-name
+  - create-launch-configuration
+  - --cli-input-json
+  - --user-data
+- iam:
+  - list-instance-profiles-for-role
+  - --role-name
+  - list-roles
+- ecs:
+  - create-cluster
+  - --cluster-name
+  - --capacity-providers
+  - describe-clusters
+  - create-capacity-provider
+  - --cli-input-json

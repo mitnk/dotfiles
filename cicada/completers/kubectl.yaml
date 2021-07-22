@@ -1,0 +1,31 @@
+- cluster-info
+- create:
+    - deployment
+- describe
+- explain
+- expose:
+    - deployment
+    - "--type=LoadBalancer"
+    - "--port"
+- get:
+    - nodes
+    - pods
+    - services
+    - deployments
+    - namespaces
+    - svc
+    - all
+    - "-A"
+    - "-o wide"
+    - "-n"
+- set
+- scale:
+  - deployment
+  - "--replicas="
+- logs
+- top
+- run
+- config:
+  - use-context
+  - get-contexts
+  - rename-context

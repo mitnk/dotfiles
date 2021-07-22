@@ -1,19 +1,26 @@
 - --version
 - build
-- exec
+- exec:
+  - "-it"
+  - bash
+  - "`docker ps -q`"
 - history
 - images
 - info
 - inspect
 - kill
-- logs
+- logs:
+  - -f
+  - "`docker ps -q`"
 - ps:
   - -a
 - pull
 - push
 - rm
 - rmi
-- run
+- run:
+  - "--rm"
+  - bash
 - search
 - start
 - stats
