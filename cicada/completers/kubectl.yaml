@@ -1,14 +1,47 @@
+- apply
+- attach
 - cluster-info
 - create:
     - deployment
+- delete
 - describe
-- explain
+- exec
+- explain:
+  - bindings
+  - componentstatuses
+  - configmaps
+  - endpoints
+  - events
+  - limitranges
+  - namespaces
+  - nodes
+  - persistentvolumeclaims
+  - persistentvolumes
+  - pods
+  - podtemplates
+  - replicationcontrollers
+  - resourcequotas
+  - secrets
+  - serviceaccounts
+  - services
+  - pods.apiVersion
+  - pods.kind
+  - "`kubectl explain pods.metadata | grep -o '^   [a-z][a-zA-Z0-9_-]*' | sed 's/^ */pods.metadata./`"
+  - "`kubectl explain pods.spec | grep -o '^   [a-z][a-zA-Z0-9_-]*' | sed 's/^ */pods.spec./`"
+  - "`kubectl explain pods.status | grep -o '^   [a-z][a-zA-Z0-9_-]*' | sed 's/^ */pods.status./`"
+  - nodes.apiVersion
+  - nodes.kind
+  - "`kubectl explain nodes.metadata | grep -o '^   [a-z][a-zA-Z0-9_-]*' | sed 's/^ */nodes.metadata./`"
+  - "`kubectl explain nodes.spec | grep -o '^   [a-z][a-zA-Z0-9_-]*' | sed 's/^ */nodes.spec./`"
+  - "`kubectl explain nodes.status | grep -o '^   [a-z][a-zA-Z0-9_-]*' | sed 's/^ */nodes.status./`"
 - expose:
     - deployment
     - "--type=LoadBalancer"
     - "--port"
 - get:
+    - endpoints
     - nodes
+    - events
     - pods
     - services
     - deployments
@@ -18,13 +51,21 @@
     - "-A"
     - "-o wide"
     - "-n"
+    - aa-api-gateway
+    - aa-bapi-service
+    - aa-data-model-service
+    - aa-user-service
+- port-forward
 - set
 - scale:
   - deployment
   - "--replicas="
 - logs
 - top
-- run
+- run:
+  - "--image="
+  - "--dry-run=client"
+  - "-o yaml"
 - config:
   - use-context
   - get-contexts
