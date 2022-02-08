@@ -3,6 +3,8 @@
 - exec:
   - "-it"
   - bash
+  - alpine-dev
+  - arch-dev
   - "`docker ps -q`"
 - history
 - images
@@ -22,7 +24,9 @@
   - "--rm"
   - bash
 - search
-- start
+- start:
+  - alpine-dev
+  - arch-dev
 - stats
 - stop
 - top
