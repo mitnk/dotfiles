@@ -17,8 +17,6 @@ export LESSCHARSET=UTF-8
 export COPYFILE_DISABLE=1
 export LESS="--no-init --quit-if-one-screen --RAW-CONTROL-CHARS"
 
-export ETCDCTL_API=3
-
 export RUST_BACKTRACE='full'
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/go"
@@ -34,62 +32,67 @@ export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
 export PATH="$PATH:/Library/PostgreSQL/9.6/bin"
 export PATH="$PATH:/Library/PostgreSQL/10/bin"
 
-
 export XDATA_DIR="$HOME/.local/share"
 export VIRTUALENV_HOME="${XDATA_DIR}/venvs"
-
 export HISTORY_SIZE=999999
 export HISTORY_DELETE_DUPS=1
 export NO_EXIT_ON_CTRL_D=1
+export CICADA_GITBR_PREFIX='['
+export CICADA_GITBR_SUFFIX=']'
+export PROMPT="${COLOR_STATUS}$USER${RESET}@${COLOR_STATUS}$HOSTNAME${RESET}: ${GITBR}${COLOR_STATUS}$CWD${RESET}$ "
+# on mac:
+#export PROMPT="${GITBR}${COLOR_STATUS} $CWD${RESET}$ "
 
-if uname -s | grep -iq 'darwin'
+if [ $(uname -s) = 'Darwin' ]; then
     alias ls='ls -G'
     alias ll='ls -Glh'
+    ECHO=gecho
 else
     alias ls='ls --color=auto'
     alias ll='ls -lh --color=auto'
+    ECHO=echo
 fi
 
+# functions to color iTerm2 tabs
+# (in file ~/.cicadarc_local) make terminal tab color random:
+# tab-color $(shuf -i0-255 -n1) $(shuf -i0-255 -n1) $(shuf -i0-255 -n1)
+function tab-color() {
+    $ECHO -ne "\033]6;1;bg;red;brightness;$1\a"
+    $ECHO -ne "\033]6;1;bg;green;brightness;$2\a"
+    $ECHO -ne "\033]6;1;bg;blue;brightness;$3\a"
+}
+
+function tab-reset() {
+    $ECHO -ne "\033]6;1;bg;*;default\a"
+}
+
+# function to make rust tags for vim
+# cargo install -f rusty-tags
+function rusttags {
+    rust-ctags --vim . && mv TAGS tags
+}
+
+alias ipy=ipython
+alias py=python3
+alias md5=md5sum
 alias bash='bash --rcfile ~/.bash_profile'
-alias bat='bat --theme=OneHalfDark'
 alias fd='fd -HI -E ".git/"'
 alias grep="grep -I --color=auto --exclude-dir=.git --exclude-dir=build"
 alias greppy="grep -I --color=auto --exclude-dir=.git --exclude-dir=build --include=*.py"
+alias g=git
 alias gti=git
-alias mmg='mmgo get -id'
+alias d=docker
 alias mr='mvim --remote'
+# mtr: 'traceroute' and 'ping' in a single tool
+# sudo mtr -w <domain.com>
 alias mtr='mtr -w'
 alias netio="bwm-ng"
 # cargo install procs
 alias proc='procs --sorta Start -r System Library Applications libexec sbin'
 
-# does not work currently:
-alias 鴀=git
-
-export CICADA_GITBR_PREFIX='['
-export CICADA_GITBR_SUFFIX=']'
-export PROMPT="${COLOR_STATUS}$USER${RESET}@${COLOR_STATUS}$HOSTNAME${RESET}: ${GITBR}${COLOR_STATUS}$CWD${RESET}$ "
-# export PROMPT="${COLOR_STATUS}$${RESET} "
-
-function tab-color() {
-    echo -ne "\033]6;1;bg;red;brightness;$1\a"
-    echo -ne "\033]6;1;bg;green;brightness;$2\a"
-    echo -ne "\033]6;1;bg;blue;brightness;$3\a"
-}
-
-function tab-reset() {
-    echo -ne "\033]6;1;bg;*;default\a"
-}
-
-# make terminal tab color random:
-# tab-color $(shuf -i0-255 -n1) $(shuf -i0-255 -n1) $(shuf -i0-255 -n1)
-
-alias ipy=ipython
-alias py=python3
-alias md5=md5sum
-
+# define it in ~/.cicadarc_local to make cicada write logs
 # export CICADA_LOG_FILE="/tmp/cicada-debug.log"
 
-if [ -f ~/.cicadarc_local ]
+if [ -f ~/.cicadarc_local ]; then
     source ~/.cicadarc_local
 fi
