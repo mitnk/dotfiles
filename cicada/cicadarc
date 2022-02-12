@@ -73,7 +73,6 @@ function rusttags {
 }
 
 alias ipy=ipython
-alias py=python3
 alias md5=md5sum
 alias bash='bash --rcfile ~/.bash_profile'
 alias fd='fd -HI -E ".git/"'
