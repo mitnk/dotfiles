@@ -4,3 +4,6 @@
 "\e[1;9C": forward-word
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+# https://unix.stackexchange.com/q/331337/11409
+"\C-k": "printf '\\ec'\015"
+"\C-l": "printf \'\\033c\'\015"
