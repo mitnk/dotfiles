@@ -5,6 +5,7 @@
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 # https://en.wikipedia.org/wiki/ASCII#ASCII_control_code_chart
+# https://en.wikipedia.org/wiki/ANSI_escape_code#Fs_Escape_sequences
 # https://unix.stackexchange.com/q/331337/11409
 "\C-k": "printf '\\ec'\r"
 "\C-l": "printf \'\\033c\'\015"
