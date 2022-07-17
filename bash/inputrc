@@ -4,6 +4,7 @@
 "\e[1;9C": forward-word
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+# https://en.wikipedia.org/wiki/ASCII#ASCII_control_code_chart
 # https://unix.stackexchange.com/q/331337/11409
-"\C-k": "printf '\\ec'\015"
+"\C-k": "printf '\\ec'\r"
 "\C-l": "printf \'\\033c\'\015"
