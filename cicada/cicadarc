@@ -30,6 +30,7 @@ export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.8/bin"
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
 export PATH="$PATH:/Library/PostgreSQL/9.6/bin"
 export PATH="$PATH:/Library/PostgreSQL/10/bin"
+export PATH="$PATH:/opt/homebrew/bin"
 
 export XDATA_DIR="$HOME/.local/share"
 export VIRTUALENV_HOME="${XDATA_DIR}/venvs"
