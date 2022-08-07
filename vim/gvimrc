@@ -3,3 +3,8 @@ map <M-Left> :vertical resize -3<CR>
 map <M-Down> :resize +3<CR>
 map <M-Up> :resize -3<CR>
 map <M-Right> :vertical resize +3<CR>
+
+" let's put colorscheme here to fix hlsearch lost under cursor
+
+" colo delek
+colo evening
