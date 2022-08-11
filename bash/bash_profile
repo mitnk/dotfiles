@@ -96,20 +96,14 @@ export LESS="-R"
 
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.8/bin"
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin"
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
 export GOPATH="$HOME/go"
 export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin:$HOME/.cargo/bin"
 
-# With color=auto, it displays color in the output
-# unless the output is piped to a command, or redirected to a file.
 # if -I not support, install the latest GNU grep.
 alias grep="grep -I --color=auto --exclude-dir=.git"
 alias greppy="grep -I --color=auto --exclude-dir=.git --include=*.py"
 alias netio="bwm-ng"
-alias xonsh="XONSH_DEBUG=1 xonsh"
-
-export ETCDCTL_API=3
 
 if [ -f "${HOME}/.bash_profile_local" ] ; then
     source "${HOME}/.bash_profile_local"
