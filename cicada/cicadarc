@@ -1,10 +1,7 @@
 export CICADA_LOG_FILE=""
-export CLICOLOR=1
 
 # fix locale warnnings,
 # use `sudo locale-gen "en_US.UTF-8"` to generate if needed
-# can put these two lines to /etc/default/locale (without "export")
-# http://askubuntu.com/a/229512
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -21,14 +18,13 @@ export RUST_BACKTRACE='full'
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/go"
 export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
+export EDITOR=vim
+export VISUAL=vim
+export CLICOLOR=1
 
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.10/bin"
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin"
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.8/bin"
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin"
-export PATH="$PATH:/Library/PostgreSQL/9.6/bin"
 export PATH="$PATH:/Library/PostgreSQL/10/bin"
 export PATH="$PATH:/opt/homebrew/bin"
 
@@ -46,6 +42,7 @@ export PROMPT="${COLOR_STATUS}$USER${RESET}@${COLOR_STATUS}$HOSTNAME${RESET}: ${
 if [ $(uname -s) = 'Darwin' ]; then
     alias ls='ls -G'
     alias ll='ls -Glh'
+    # brew install coreutils
     ECHO=gecho
 else
     alias ls='ls --color=auto'
@@ -69,7 +66,7 @@ function tab-reset() {
 # function to make rust tags for vim
 # cargo install -f rusty-tags
 function rusttags {
-    rust-ctags --vim . && mv TAGS tags
+    rusty-tags -O tags vi
 }
 
 alias ipy=ipython
