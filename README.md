@@ -1,14 +1,10 @@
-Set Up
-======
+# Set Up
 
-- https://github.com/inaz2/proxy2
+## Vim, Git, Xonsh, etc.
 
-Vim, Git, Xonsh, etc.
----------------------
+cd to subdirectories and type `make`.
 
-cd to its subdirectory and type `make`.
-
-**Vim Plugins**:
+### Vim Plugins
 
 - supertab
 - NerdTree
@@ -17,6 +13,7 @@ cd to its subdirectory and type `make`.
     - Redefines the % motion: Cycles through if/try/for/while
     - Two other motions, [% and ]%: go to the start/end of block
 
+### git
 
 ```
 cp -v git/pre-commit .git/hooks/
