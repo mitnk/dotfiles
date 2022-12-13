@@ -67,10 +67,13 @@ endif
 
 if has("gui_running")
     set go=
-    " For Macvim in Mac
-    set guifont=Monaco:h17
-    " For GVim in Ubuntu
-    " set guifont=Bitstream\ Vera\ Sans\ Mono\ 14
+    if has("linux")
+        " For GVim in Ubuntu: `find /usr/share/fonts -iname '*mono*'`
+        set guifont=UbuntuMono\ 20
+    else
+        " For Macvim in Mac
+        set guifont=Monaco:h18
+    endif
 endif
 
 
