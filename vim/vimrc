@@ -61,6 +61,14 @@ if v:version >= 703
     set undofile
 endif
 
+" LeaderF configs
+let g:Lf_ShortcutB = ''
+let g:Lf_RootMarkers = ['mix.exs', '.git']
+let g:Lf_WorkingDirectoryMode = 'ac'
+if v:version >= 810
+    let g:Lf_WindowPosition = 'popup'
+    let g:Lf_PreviewInPopup = 1
+endif
 
 " =========================================================
 " ================== GUI Alike ============================
