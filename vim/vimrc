@@ -110,7 +110,6 @@ let mapleader = "z"
 
 nmap <silent> <Leader>e <C-^>
 nmap <Leader>l :buffers<CR>:edit<Space>#
-nmap <silent> <Leader>k :bd<CR>
 
 " copy and paste with the outside of Vim
 map <silent> <Leader>p "+gP

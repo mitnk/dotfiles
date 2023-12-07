@@ -1,5 +1,8 @@
-" You need to put fzf.vim file under the same dir.
-" https://github.com/junegunn/fzf/blob/d21d5c9510170d74a7f959309da720b6df72ca01/plugin/fzf.vim
+" You need to 1) put fzf.vim file under the same dir:
+" https://github.com/junegunn/fzf/blob/master/plugin/fzf.vim
+" 2) install fzf: https://github.com/junegunn/fzf/releases
+" 3) install fd: cargo install -f fd-find
+let $FZF_DEFAULT_COMMAND = "fd --type f"
 
 function! FindFzfRoot()
     let l:current_dir = getcwd()
@@ -20,4 +23,4 @@ function! FzfWithDirFunc(directory)
     execute 'FZF ' . a:directory
 endfunction
 
-nnoremap <Leader>f :call FzfWithDirFunc(FindFzfRoot())<CR>
+nnoremap <Leader>k :call FzfWithDirFunc(FindFzfRoot())<CR>
