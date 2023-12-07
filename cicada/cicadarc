@@ -14,6 +14,10 @@ export LESSCHARSET=UTF-8
 export COPYFILE_DISABLE=1
 export LESS="--no-init --quit-if-one-screen --RAW-CONTROL-CHARS"
 
+# To use the vim plugin fzf, we need to install fzf binary from
+# https://github.com/junegunn/fzf/releases
+export FZF_DEFAULT_COMMAND='fd --type f'
+
 export RUST_BACKTRACE='full'
 export GOROOT="/usr/local/go"
 export GOPATH="$HOME/go"
@@ -25,7 +29,6 @@ export CLICOLOR=1
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.10/bin"
-export PATH="$PATH:/Library/PostgreSQL/10/bin"
 export PATH="$PATH:/opt/homebrew/bin"
 
 export XDATA_DIR="$HOME/.local/share"
@@ -37,7 +40,7 @@ export CICADA_GITBR_PREFIX='['
 export CICADA_GITBR_SUFFIX=']'
 export PROMPT="${COLOR_STATUS}$USER${RESET}@${COLOR_STATUS}$HOSTNAME${RESET}: ${GITBR}${COLOR_STATUS}$CWD${RESET}$ "
 # on mac:
-#export PROMPT="${GITBR}${COLOR_STATUS} $CWD${RESET}$ "
+#export PROMPT="$GITBR$RESET${COLOR_STATUS}${RESET} ${COLOR_STATUS}$CWD${RESET}$ "
 
 if [ $(uname -s) = 'Darwin' ]; then
     alias ls='ls -G'
@@ -73,18 +76,11 @@ alias ipy=ipython
 alias md5=md5sum
 alias bash='bash --rcfile ~/.bash_profile'
 alias fd='fd -HI -E ".git/"'
-alias grep="grep -I --color=auto --exclude-dir=.git --exclude-dir=build"
-alias greppy="grep -I --color=auto --exclude-dir=.git --exclude-dir=build --include=*.py"
 alias g=git
 alias gti=git
 alias d=docker
 alias mr='mvim --remote'
-# mtr: 'traceroute' and 'ping' in a single tool
-# sudo mtr -w <domain.com>
-alias mtr='mtr -w'
 alias netio="bwm-ng"
-# cargo install procs
-alias proc='procs --sorta Start -r System Library Applications libexec sbin'
 
 # define it in ~/.cicadarc_local to make cicada write logs
 # export CICADA_LOG_FILE="/tmp/cicada-debug.log"
