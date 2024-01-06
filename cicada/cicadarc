@@ -24,7 +24,8 @@ export CLICOLOR=1
 
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.10/bin"
+export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.11/bin"
+export PATH="$PATH:/Library/PostgreSQL/10/bin"
 export PATH="$PATH:/opt/homebrew/bin"
 
 export XDATA_DIR="$HOME/.local/share"
@@ -36,7 +37,7 @@ export CICADA_GITBR_PREFIX='['
 export CICADA_GITBR_SUFFIX=']'
 export PROMPT="${COLOR_STATUS}$USER${RESET}@${COLOR_STATUS}$HOSTNAME${RESET}: ${GITBR}${COLOR_STATUS}$CWD${RESET}$ "
 # on mac:
-#export PROMPT="$GITBR$RESET${COLOR_STATUS}${RESET} ${COLOR_STATUS}$CWD${RESET}$ "
+#export PROMPT="${GITBR}${COLOR_STATUS} $CWD${RESET}$ "
 
 if [ $(uname -s) = 'Darwin' ]; then
     alias ls='ls -G'
@@ -69,14 +70,20 @@ function rusttags {
 }
 
 alias ipy=ipython
-alias md5=md5sum
 alias bash='bash --rcfile ~/.bash_profile'
 alias fd='fd -HI -E ".git/"'
 alias g=git
 alias gti=git
 alias d=docker
+alias k=kubectl
 alias mr='mvim --remote'
+# mtr: 'traceroute' and 'ping' in a single tool
+# sudo mtr -w <domain.com>
+alias mtr='mtr -w'
 alias netio="bwm-ng"
+# cargo install procs
+alias proc='procs --sorta Start -r System Library Applications libexec sbin'
+alias bat='bat --style=plain --paging=never --theme=ansi'
 
 # define it in ~/.cicadarc_local to make cicada write logs
 # export CICADA_LOG_FILE="/tmp/cicada-debug.log"
