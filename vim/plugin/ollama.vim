@@ -36,6 +36,10 @@ if !exists('g:ollama_debounce_time')
     let g:ollama_debounce_time = 500
 endif
 
+if !exists('g:ollama_timeout')
+    let g:ollama_timeout = 10
+endif
+
 " Defines the color scheme for ollama suggestions
 function! s:ColorScheme() abort
     if &t_Co == 256
@@ -60,6 +64,11 @@ function! s:HandleTabCompletion() abort
 
     " fallback to default tab completion if no suggestion was inserted
     if exists('g:ollama_original_tab_mapping') && !empty(g:ollama_original_tab_mapping)
+        if g:ollama_original_tab_mapping.rhs =~# '^<Plug>'
+            call ollama#logger#Info("<tab> feedkeys")
+            call feedkeys("\<Plug>" . matchstr(g:ollama_original_tab_mapping.rhs, '^<Plug>\zs.*'), 'm')
+            return ''
+        endif
         " If no completion and there is an original <Tab> mapping, execute it
         if g:ollama_original_tab_mapping.expr
             " rhs is an expression
@@ -116,7 +125,6 @@ augroup ollama
 augroup END
 
 call s:ColorScheme()
-call s:MapTab()
 
 " Load autoload functions
 runtime autoload/ollama.vim
