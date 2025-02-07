@@ -12,10 +12,6 @@ let s:timer_id = -1
 " a running REST API job
 let s:job = v:null
 let s:kill_job = v:null
-" fill-in-the-middle (default settings for codellama)
-let s:fim_prefix = '<PRE> '
-let s:fim_middle = ' <MID>'
-let s:fim_suffix = ' <SUF>'
 " current prompt
 let s:prompt = ''
 " current suggestions
@@ -26,19 +22,21 @@ let s:prop_id = -1
 " only when the user types text we want a reschedule
 let s:ignore_schedule = 0
 
-let s:has_nvim_ghost_text = has('nvim-0.6') && exists('*nvim_buf_get_mark')
 let s:vim_minimum_version = '9.0.0185'
 let s:has_vim_ghost_text = has('patch-' . s:vim_minimum_version) && has('textprop')
-let s:has_ghost_text = s:has_nvim_ghost_text || s:has_vim_ghost_text
 
 let s:hlgroup = 'OllamaSuggestion'
 let s:annot_hlgroup = 'OllamaAnnotation'
 
-if s:has_vim_ghost_text && empty(prop_type_get(s:hlgroup))
-    call prop_type_add(s:hlgroup, {'highlight': s:hlgroup})
-endif
-if s:has_vim_ghost_text && empty(prop_type_get(s:annot_hlgroup))
-    call prop_type_add(s:annot_hlgroup, {'highlight': s:annot_hlgroup})
+if s:has_vim_ghost_text
+    if empty(prop_type_get(s:hlgroup))
+        call prop_type_add(s:hlgroup, {'highlight': s:hlgroup})
+    endif
+    if empty(prop_type_get(s:annot_hlgroup))
+        call prop_type_add(s:annot_hlgroup, {'highlight': s:annot_hlgroup})
+    endif
+else
+    echom "warning: you Vim version does not support ghost text (textprop)"
 endif
 
 function! ollama#Schedule()
@@ -110,10 +108,6 @@ function! ollama#GetSuggestion(timer)
     let l:current_line = line('.')
     let l:current_col = col('.')
     let l:context_lines = 30
-    " get active FIM settings
-    let l:fim_prefix = get(g:, 'ollama_fim_prefix', s:fim_prefix)
-    let l:fim_middle = get(g:, 'ollama_fim_middle', s:fim_middle)
-    let l:fim_suffix = get(g:, 'ollama_fim_suffix', s:fim_suffix)
 
     " Get the lines before and after the current line
     let l:prefix_lines = getline(max([1, l:current_line - l:context_lines]), l:current_line - 1)
@@ -132,26 +126,19 @@ function! ollama#GetSuggestion(timer)
     endif
     let l:suffix .= join(l:suffix_lines, "\n")
 
-    " Create the prompt using the specified syntax
-    if (g:ollama_model == 'llama3')
-        " TODO: make this working!!!
-        " llama3 does not support fill-in-the-middle, so we use a carefully
-        " engineered prompt instead and hope for the best.
-        let l:prompt = "You are a code completion model. When provided with some code, complete the code marked with _____. Output only the completion. Output no other code. Output no other text.\n"
-        let l:prompt .= "```\n".l:prefix."_____\n".l:suffix."\n```"
-    else
-        " Regular fill-in-the-middle for codellama using configured tokens
-        let l:prompt = l:fim_prefix . l:prefix . l:fim_suffix . l:suffix . l:fim_middle
-    endif
+    let l:prompt = l:prefix . '<FILL_IN_HERE>' . l:suffix
 
     let l:model_options = substitute(json_encode(g:ollama_model_options), "\"", "\\\"", "g")
     call ollama#logger#Debug("Connecting to Ollama on ".g:ollama_host." using model ".g:ollama_model)
     call ollama#logger#Debug("model_options=".l:model_options)
+    " Convert plugin debug level to python logger levels
+    let l:log_level = ollama#logger#PythonLogLevel(g:ollama_debug)
     " Adjust the command to use the prompt as stdin input
-    let l:command = [ "python3", expand('<script>:h:h') . "/python/ollama.py",
+    let l:command = [ "python3", expand('<script>:h:h') . "/python/complete.py",
         \ "-m", g:ollama_model,
         \ "-u", g:ollama_host,
-        \ "-o", l:model_options
+        \ "-o", l:model_options,
+        \ "-l", l:log_level
         \ ]
     call ollama#logger#Debug("command=". join(l:command, " "))
     let l:job_options = {
@@ -190,7 +177,7 @@ function! ollama#UpdatePreview(suggestion)
         if empty(text[-1])
             call remove(text, -1)
         endif
-        if empty(text) || !s:has_ghost_text
+        if empty(text) || !s:has_vim_ghost_text
             return ollama#ClearPreview()
         endif
         let annot= ''
@@ -209,8 +196,10 @@ endfunction
 
 function! ollama#ClearPreview()
     call ollama#logger#Debug("ClearPreview")
-    call prop_remove({'type': s:hlgroup, 'all': v:true})
-    call prop_remove({'type': s:annot_hlgroup, 'all': v:true})
+    if s:has_vim_ghost_text
+        call prop_remove({'type': s:hlgroup, 'all': v:true})
+        call prop_remove({'type': s:annot_hlgroup, 'all': v:true})
+    endif
 endfunction
 
 function! s:KillJob()
@@ -252,7 +241,7 @@ endfunction
 
 function! ollama#InsertStringWithNewlines(text, morelines)
     " Split the string into lines
-    let l:lines = split(a:text, "\n")
+    let l:lines = split(a:text, "\n", 1)
 
     " Insert first line at cursor position
     " get current line
@@ -262,7 +251,7 @@ function! ollama#InsertStringWithNewlines(text, morelines)
     let l:before_cursor = strpart(l:line, 0, l:current_col - 1)
     let l:after_cursor = strpart(l:line, l:current_col - 1)
     " build new line
-    let l:new_line = l:before_cursor . l:lines[0] . l:after_cursor
+    let l:new_line = l:before_cursor . l:lines[0]
     call setline('.', l:new_line)
     let l:new_cursor_col = strlen(l:before_cursor) + strlen(l:lines[0])
 
@@ -282,6 +271,11 @@ function! ollama#InsertStringWithNewlines(text, morelines)
         let l:new_cursor_col = strlen(l:indented_line)
         let l:current_line += 1
     endfor
+    " append after_cursor text at the end of last inserted line
+    if (l:after_cursor != "")
+        let l:line = getline(l:current_line) . l:after_cursor
+        call setline(l:current_line, l:line)
+    endif
 
     if (a:morelines == 1)
         call append(l:current_line, "")

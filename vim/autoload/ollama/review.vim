@@ -6,6 +6,10 @@ let s:buf = -1
 " Map a key to send user input to the chatbot
 nnoremap <buffer> <silent> <Enter> :call <sid>SendInputToChatBot()<CR>
 
+if !exists('g:ollama_review_logfile')
+    let g:ollama_review_logfile = tempname() . '-ollama-review.log'
+endif
+
 " Define a function to send user input to the chatbot
 function! s:SendInputToChatBot()
     " Get the user input
@@ -148,8 +152,16 @@ function! s:StartChat(lines) abort
         \ 'exit_cb': function('JobExit'),
         \ }
 
+    " Convert plugin debug level to python logger levels
+    let l:log_level = ollama#logger#PythonLogLevel(g:ollama_debug)
+
     " Start the Python script as a job
-    let l:command = printf('python3 %s/python/chat.py -m %s -u %s', expand('<script>:h:h:h'), g:ollama_chat_model, g:ollama_host)
+    let l:command = printf('python3 %s/python/chat.py -m %s -u %s -t %s -l %u',
+                \ expand('<script>:h:h:h'),
+                \ g:ollama_chat_model, 
+                \ g:ollama_host,
+                \ g:ollama_timeout,
+                \ l:log_level)
 
     " Start a shell in the background.
     let s:job = job_start(l:command, job_options)
@@ -188,7 +200,9 @@ function! s:StartChat(lines) abort
     let l:buf = bufnr('')
     let s:buf = l:buf
     " Create a channel log so we can see what happens.
-    call ch_logfile('logfile', 'w')
+    if g:ollama_debug >= 4
+        call ch_logfile(g:ollama_review_logfile, 'w')
+    endif
 
     " Add a title to the chat buffer
     call append(0, "Chat with Bot")
