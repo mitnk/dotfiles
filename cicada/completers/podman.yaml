@@ -1,0 +1,10 @@
+- machine:
+  - list
+  - info
+  - start
+  - stop
+- system:
+  - connection
+  - remove
+  - list
+- run

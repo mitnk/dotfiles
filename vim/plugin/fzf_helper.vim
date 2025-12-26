@@ -3,6 +3,7 @@
 " 2) install fzf: https://github.com/junegunn/fzf/releases
 " 3) install fd: cargo install -f fd-find
 let $FZF_DEFAULT_COMMAND = "fd --type f"
+let $FZF_DEFAULT_OPTS = "--exact"
 
 function! FindFzfRoot()
     let l:current_dir = getcwd()

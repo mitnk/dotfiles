@@ -17,11 +17,10 @@ set complete-=i
 colo delek
 "colo evening
 
-" nubmer of spaces for each <tab>
+" number of spaces for each <tab>
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set autoindent
 set smartindent
 
 " encodings
@@ -43,6 +42,7 @@ set backspace=indent,eol,start
 " Then you are good to use <C-]> to jump through definitions,
 " use <C-t> to go back.
 set tags=tags;/
+nnoremap <C-]> g<C-]>
 
 
 " Disable automatic comment insertion
@@ -50,15 +50,24 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " =========================================================
 " ================== Back Up and Undo =====================
+" Make sure to create these directories:
+" mkdir -p ~/.vim/tmp ~/.vim/undo
+
 set noswapfile
+
 set backup
-set directory=~/.vim/tmp
+set backupext=.bak
 set backupdir=~/.vim/tmp
 
-" Persistent Undo from Vim 7.3
-if v:version >= 703
-    set undodir=~/.vim/undo
-    set undofile
+" Persistent Undo since Vim 7.3
+set undofile
+set undodir=~/.vim/undo
+
+" Disable backup for sudoedit (sudo -e)
+if exists('$SUDO_USER')
+    set nobackup
+    set nowritebackup
+    set noundofile
 endif
 
 " =========================================================
@@ -71,12 +80,12 @@ if has("gui_running")
         set guifont=UbuntuMono\ 20
     else
         " For Macvim in Mac
-        set guifont=Monaco:h18
+        set guifont=Monaco:h22
     endif
 endif
 
 
-" Display tabs and trailing spaces visually  
+" Display tabs and trailing spaces visually 
 set list listchars=tab:>-,trail:■
 
 " special handle for C files
@@ -119,8 +128,6 @@ map <silent> <Leader>y "+y
 " Run Python and C/C++ in Vim
 nmap <silent> <Leader>P :w<CR>:!py % > vim-py3.out && echo === PY3 OUTPUT === && cat vim-py3.out && rm -f vim-py3.out<CR>
 nmap <silent> <Leader>G :w<CR>:!gcc -o vim-gcc.out %<CR>:!echo === GCC OUTPUT === && ./vim-gcc.out && rm vim-gcc.out<CR>
-nmap <silent> <Leader>R :w<CR>:!cargo run<CR>
-nmap <silent> <Leader>GG :w<CR>:!g++ -o vim-gcc.out %<CR>:!echo === GCC OUTPUT === && ./vim-gcc.out && rm vim-gcc.out<CR>
 
 nmap <silent> <SPACE> <C-F>
 nmap <silent> <S-SPACE> <C-B>
@@ -143,71 +150,6 @@ else
   let g:thwins_master_pane_width=&columns * 3 / 5
 endif
 
-function! HighlightStatusLine()
-    " Set statusline
-    set statusline=
-    " File path
-    if has("gui_running")
-        set statusline+=%5*
-    endif
-    set statusline+=\ %m%r%w%F%=
-
-    " Row / Column
-    if has("gui_running")
-        set statusline+=%5*
-    endif
-    set statusline+=\ [%l:%c]\ [%P]
-
-    " FileType
-    if has("gui_running")
-        set statusline+=\ %3*
-    endif
-    set statusline+=\ %Y/
-
-    " Encoding
-    if has("gui_running")
-        set statusline+=%3*
-    endif
-    set statusline+=%{''.(&fenc!=''?&fenc:&enc).''}/
-
-    " Encoding2
-    if has("gui_running")
-        set statusline+=%3*
-    endif
-    set statusline+=%{(&bomb?\",BOM\":\"\")}           "Encoding2
-
-    " FileFormat (unix / dos ..)
-    if has("gui_running")
-        set statusline+=%3*
-    endif
-    set statusline+=%{&ff}\ 
-
-    if has("gui_running")
-        hi User1 guifg=#ffdad8  guibg=#000000
-        hi User2 guifg=#000000  guibg=#F4905C
-        hi User3 guifg=#999999  guibg=#aefe7B
-        hi User4 guifg=#112605  guibg=#aefe7B
-        hi User5 guifg=#051d00  guibg=#7dcc7d
-        hi User7 guifg=#ffffff  guibg=#880c0e gui=bold
-        hi User8 guifg=#ffffff  guibg=#5b7fbb
-        hi User9 guifg=#ffffff  guibg=#810085
-        hi User0 guifg=#ffffff  guibg=#094afe
-    endif
-endfunction
-
-function! UnHighlightStatusLine()
-    setlocal statusline=%1*%F
-    if has("gui_running")
-        hi User1 guifg=#333333 guibg=#222222
-    endif
-endfunction
-
-autocmd! BufEnter * call HighlightStatusLine()
-autocmd! BufLeave * call UnHighlightStatusLine()
-
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 " http://stackoverflow.com/a/7078429/665869
 cmap w!! w !sudo tee > /dev/null %
-
-" let g:ollama_chat_model = 'llama3.1:8b'
-" let g:ollama_model = 'qwen2.5-coder:3b'

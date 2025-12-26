@@ -1,0 +1,64 @@
+- app.config
+- app.start
+- app.tree
+- archive
+- archive.build
+- archive.install
+- archive.uninstall
+- clean
+- cmd
+- compile
+- deps
+- deps.get
+- deps.update:
+  - "--all"
+- deps.unlock:
+  - "--check-unused"
+- dialyzer
+- do
+- docs:
+  - "--open"
+- escript.install
+- escript.uninstall
+- eval
+- format
+- help
+- hex
+- hex.info
+- hex.publish
+- loadconfig
+- local
+- local.hex
+- local.public_keys
+- local.rebar
+- new:
+  - "--app"
+  - "--umbrella"
+  - "--module"
+  - "--sup"
+- phx.new
+- phx.server
+- profile.cprof
+- profile.eprof
+- profile.fprof
+- release
+- release.init
+- run:
+  - --eval  #, -e - evaluates the given code
+  - --require  # -r - executes the given pattern/file
+  - --parallel  # -p - makes all requires parallel
+  - --preload-modules  # - preloads all modules defined in applications
+  - --no-archives-check  # - does not check archives
+  - --no-compile  # - does not compile even if files require compilation
+  - --no-deps-check  # - does not check dependencies
+  - --no-elixir-version-check  # - does not check the Elixir version from
+  - --no-halt  # - does not halt the system after running the command
+  - --no-mix-exs  # - allows the command to run even if there is no mix.exs
+  - --no-start  # does not start applications after compilation
+- test:
+  - "--exclude"
+  - "--include"
+  - "--failed"
+  - "--timeout"
+- test.coverage
+- xref

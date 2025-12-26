@@ -1,0 +1,11 @@
+- current
+- uninstall
+- plugin:
+  - list
+- install:
+  - erlang
+  - elixir
+  - latest
+- list:
+  - erlang
+  - elixir
